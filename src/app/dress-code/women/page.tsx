@@ -184,79 +184,6 @@ export default function WomenDressCodePage() {
             </div>
           </section>
 
-          {/* Colors Reserved for Bridesmaids */}
-          <section className="mb-20">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
-                Colors Reserved for the Bridesmaids
-              </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-10 text-center max-w-3xl mx-auto leading-relaxed">
-                Bridesmaids will be wearing specific color families, and guests are kindly asked to refrain from wearing these shades.
-              </p>
-
-              <div className="space-y-10">
-                {/* Group 1: Shades of Green */}
-                <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Shades of Green</h3>
-                  <div className="grid grid-cols-5 md:grid-cols-8 gap-3">
-                    <div className="h-20 rounded-lg bg-[#2D5016]"></div>
-                    <div className="h-20 rounded-lg bg-[#3A6B1F]"></div>
-                    <div className="h-20 rounded-lg bg-[#4A7C2A]"></div>
-                    <div className="h-20 rounded-lg bg-[#5B8F3A]"></div>
-                    <div className="h-20 rounded-lg bg-[#6BA04A]"></div>
-                    <div className="h-20 rounded-lg bg-[#7BB15A]"></div>
-                    <div className="h-20 rounded-lg bg-[#8BC26A]"></div>
-                    <div className="h-20 rounded-lg bg-[#9BD37A]"></div>
-                  </div>
-                </div>
-
-                {/* Group 2: Shades of Brown */}
-                <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Shades of Brown</h3>
-                  <div className="grid grid-cols-5 md:grid-cols-8 gap-3">
-                    <div className="h-20 rounded-lg bg-[#3E2723]"></div>
-                    <div className="h-20 rounded-lg bg-[#5D4037]"></div>
-                    <div className="h-20 rounded-lg bg-[#6D4C41]"></div>
-                    <div className="h-20 rounded-lg bg-[#8D6E63]"></div>
-                    <div className="h-20 rounded-lg bg-[#A1887F]"></div>
-                    <div className="h-20 rounded-lg bg-[#BCAAA4]"></div>
-                    <div className="h-20 rounded-lg bg-[#D7CCC8]"></div>
-                    <div className="h-20 rounded-lg bg-[#EFEBE9]"></div>
-                  </div>
-                </div>
-
-                {/* Group 3: Terracotta Tones */}
-                <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Terracotta Tones</h3>
-                  <div className="grid grid-cols-5 md:grid-cols-8 gap-3">
-                    <div className="h-20 rounded-lg bg-[#8B4513]"></div>
-                    <div className="h-20 rounded-lg bg-[#A0522D]"></div>
-                    <div className="h-20 rounded-lg bg-[#CD853F]"></div>
-                    <div className="h-20 rounded-lg bg-[#D2691E]"></div>
-                    <div className="h-20 rounded-lg bg-[#E07A3F]"></div>
-                    <div className="h-20 rounded-lg bg-[#E9967A]"></div>
-                    <div className="h-20 rounded-lg bg-[#F4A460]"></div>
-                    <div className="h-20 rounded-lg bg-[#FFB380]"></div>
-                  </div>
-                </div>
-
-                {/* Group 4: Wine / Deep Red Tones */}
-                <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Wine / Deep Red Tones</h3>
-                  <div className="grid grid-cols-5 md:grid-cols-8 gap-3">
-                    <div className="h-20 rounded-lg bg-[#4A0E0E]"></div>
-                    <div className="h-20 rounded-lg bg-[#6B1F1F]"></div>
-                    <div className="h-20 rounded-lg bg-[#8B2E2E]"></div>
-                    <div className="h-20 rounded-lg bg-[#A03D3D]"></div>
-                    <div className="h-20 rounded-lg bg-[#B54C4C]"></div>
-                    <div className="h-20 rounded-lg bg-[#722F37]"></div>
-                    <div className="h-20 rounded-lg bg-[#8B3E47]"></div>
-                    <div className="h-20 rounded-lg bg-[#A44D57]"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* Approved Color Direction Section */}
           <section className="mb-20">
@@ -269,22 +196,70 @@ export default function WomenDressCodePage() {
               </p>
               
               <div className="grid grid-cols-4 md:grid-cols-8 gap-3 max-w-3xl mx-auto">
+                {/* Shades of Blue */}
                 <div className="h-20 rounded-lg bg-[#1A237E]"></div>
                 <div className="h-20 rounded-lg bg-[#283593]"></div>
                 <div className="h-20 rounded-lg bg-[#3949AB]"></div>
                 <div className="h-20 rounded-lg bg-[#5C6BC0]"></div>
-                <div className="h-20 rounded-lg bg-[#6A1B9A]"></div>
-                <div className="h-20 rounded-lg bg-[#7B1FA2]"></div>
-                <div className="h-20 rounded-lg bg-[#8E24AA]"></div>
-                <div className="h-20 rounded-lg bg-[#9C27B0]"></div>
-                <div className="h-20 rounded-lg bg-[#424242]"></div>
-                <div className="h-20 rounded-lg bg-[#616161]"></div>
-                <div className="h-20 rounded-lg bg-[#757575]"></div>
-                <div className="h-20 rounded-lg bg-[#9E9E9E]"></div>
                 <div className="h-20 rounded-lg bg-[#0D47A1]"></div>
                 <div className="h-20 rounded-lg bg-[#1565C0]"></div>
                 <div className="h-20 rounded-lg bg-[#1976D2]"></div>
                 <div className="h-20 rounded-lg bg-[#1E88E5]"></div>
+                {/* Shades of Purple */}
+                <div className="h-20 rounded-lg bg-[#4A148C]"></div>
+                <div className="h-20 rounded-lg bg-[#6A1B9A]"></div>
+                <div className="h-20 rounded-lg bg-[#7B1FA2]"></div>
+                <div className="h-20 rounded-lg bg-[#8E24AA]"></div>
+                <div className="h-20 rounded-lg bg-[#9C27B0]"></div>
+                <div className="h-20 rounded-lg bg-[#AB47BC]"></div>
+                <div className="h-20 rounded-lg bg-[#BA68C8]"></div>
+                <div className="h-20 rounded-lg bg-[#CE93D8]"></div>
+                {/* Shades of Gray */}
+                <div className="h-20 rounded-lg bg-[#212121]"></div>
+                <div className="h-20 rounded-lg bg-[#424242]"></div>
+                <div className="h-20 rounded-lg bg-[#616161]"></div>
+                <div className="h-20 rounded-lg bg-[#757575]"></div>
+                <div className="h-20 rounded-lg bg-[#9E9E9E]"></div>
+                <div className="h-20 rounded-lg bg-[#BDBDBD]"></div>
+                <div className="h-20 rounded-lg bg-[#E0E0E0]"></div>
+                <div className="h-20 rounded-lg bg-[#F5F5F5]"></div>
+                
+                {/* Shades of Red */}
+                <div className="h-20 rounded-lg bg-[#4A0E0E]"></div>
+                <div className="h-20 rounded-lg bg-[#6B1F1F]"></div>
+                <div className="h-20 rounded-lg bg-[#8B2E2E]"></div>
+                <div className="h-20 rounded-lg bg-[#A03D3D]"></div>
+                <div className="h-20 rounded-lg bg-[#B54C4C]"></div>
+                <div className="h-20 rounded-lg bg-[#722F37]"></div>
+                <div className="h-20 rounded-lg bg-[#8B3E47]"></div>
+                <div className="h-20 rounded-lg bg-[#A44D57]"></div>
+                {/* Terracotta Tones */}
+                <div className="h-20 rounded-lg bg-[#8B4513]"></div>
+                <div className="h-20 rounded-lg bg-[#A0522D]"></div>
+                <div className="h-20 rounded-lg bg-[#CD853F]"></div>
+                <div className="h-20 rounded-lg bg-[#D2691E]"></div>
+                <div className="h-20 rounded-lg bg-[#E07A3F]"></div>
+                <div className="h-20 rounded-lg bg-[#E9967A]"></div>
+                <div className="h-20 rounded-lg bg-[#F4A460]"></div>
+                <div className="h-20 rounded-lg bg-[#FFB380]"></div>
+                {/* Shades of Brown */}
+                <div className="h-20 rounded-lg bg-[#3E2723]"></div>
+                <div className="h-20 rounded-lg bg-[#5D4037]"></div>
+                <div className="h-20 rounded-lg bg-[#6D4C41]"></div>
+                <div className="h-20 rounded-lg bg-[#8D6E63]"></div>
+                <div className="h-20 rounded-lg bg-[#A1887F]"></div>
+                <div className="h-20 rounded-lg bg-[#BCAAA4]"></div>
+                <div className="h-20 rounded-lg bg-[#D7CCC8]"></div>
+                <div className="h-20 rounded-lg bg-[#EFEBE9]"></div>
+                {/* Shades of Green */}
+                <div className="h-20 rounded-lg bg-[#2D5016]"></div>
+                <div className="h-20 rounded-lg bg-[#3A6B1F]"></div>
+                <div className="h-20 rounded-lg bg-[#4A7C2A]"></div>
+                <div className="h-20 rounded-lg bg-[#5B8F3A]"></div>
+                <div className="h-20 rounded-lg bg-[#6BA04A]"></div>
+                <div className="h-20 rounded-lg bg-[#7BB15A]"></div>
+                <div className="h-20 rounded-lg bg-[#8BC26A]"></div>
+                <div className="h-20 rounded-lg bg-[#9BD37A]"></div>
               </div>
             </div>
           </section>
