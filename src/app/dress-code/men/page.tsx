@@ -3,8 +3,11 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { LanguageProvider } from "@/contexts/LanguageContext"
 
-export default function MenDressCodePage() {
+function MenDressCodePageContent() {
+  const { t } = useLanguage()
   // Real-life tailcoat examples for carousel
   const tailcoatExamples = [
     {
@@ -34,10 +37,10 @@ export default function MenDressCodePage() {
           {/* 1. Page Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Men's Dress Code
+              {t("dressCodeMen.title")}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              This page outlines the expected formal attire for male guests attending our wedding celebration.
+              {t("dressCodeMen.description")}
             </p>
           </div>
 
@@ -45,10 +48,10 @@ export default function MenDressCodePage() {
           <section className="mb-20">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Formal Attire Required
+                {t("dressCodeMen.formalRequired")}
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Our wedding is a formal event that requires traditional formalwear. We ask that all male guests adhere to the dress code to maintain the elegance and formality of the occasion.
+                {t("dressCodeMen.formalRequiredDesc")}
               </p>
             </div>
           </section>
@@ -57,10 +60,10 @@ export default function MenDressCodePage() {
           <section className="mb-20">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Tailcoat for the Groom's Guests
+                {t("dressCodeMen.tailcoat")}
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Grooms' guests are required to wear a traditional tailcoat. This is a key part of the formal dress code and helps create a cohesive and elegant atmosphere for our special day.
+                {t("dressCodeMen.tailcoatDesc")}
               </p>
             </div>
           </section>
@@ -69,7 +72,7 @@ export default function MenDressCodePage() {
           <section className="mb-20">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-                How to Wear a Traditional Tailcoat
+                {t("dressCodeMen.howToWear")}
               </h2>
               
               <div className="relative flex flex-col md:flex-row gap-4 md:gap-8">
@@ -94,9 +97,9 @@ export default function MenDressCodePage() {
                     <div className="hidden md:block absolute -left-16 w-12 h-0.5 bg-foreground"></div>
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">Tailcoat Jacket</h3>
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.tailcoatJacket")}</h3>
                       <p className="text-gray-700 dark:text-gray-300 text-sm">
-                        A formal black tailcoat with tails extending below the waist at the back.
+                        {t("dressCodeMen.tailcoatJacketDesc")}
                       </p>
                     </div>
                   </div>
@@ -106,9 +109,9 @@ export default function MenDressCodePage() {
                     <div className="hidden md:block absolute -left-16 w-12 h-0.5 bg-foreground"></div>
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">Shirt</h3>
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.shirt")}</h3>
                       <p className="text-gray-700 dark:text-gray-300 text-sm">
-                        A crisp white formal dress shirt with a wing collar or turndown collar.
+                        {t("dressCodeMen.shirtDesc")}
                       </p>
                     </div>
                   </div>
@@ -118,9 +121,9 @@ export default function MenDressCodePage() {
                     <div className="hidden md:block absolute -left-16 w-12 h-0.5 bg-foreground"></div>
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">Waistcoat</h3>
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.waistcoat")}</h3>
                       <p className="text-gray-700 dark:text-gray-300 text-sm">
-                        A matching waistcoat (vest) worn under the tailcoat, typically in black or matching the tailcoat.
+                        {t("dressCodeMen.waistcoatDesc")}
                       </p>
                     </div>
                   </div>
@@ -130,9 +133,9 @@ export default function MenDressCodePage() {
                     <div className="hidden md:block absolute -left-16 w-12 h-0.5 bg-foreground"></div>
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">Tie / Bow Tie</h3>
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.tie")}</h3>
                       <p className="text-gray-700 dark:text-gray-300 text-sm">
-                        A formal white bow tie or black tie, properly tied and centered.
+                        {t("dressCodeMen.tieDesc")}
                       </p>
                     </div>
                   </div>
@@ -142,9 +145,9 @@ export default function MenDressCodePage() {
                     <div className="hidden md:block absolute -left-16 w-12 h-0.5 bg-foreground"></div>
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">Trousers</h3>
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.trousers")}</h3>
                       <p className="text-gray-700 dark:text-gray-300 text-sm">
-                        Matching formal black trousers with a proper fit, typically with a stripe down the side.
+                        {t("dressCodeMen.trousersDesc")}
                       </p>
                     </div>
                   </div>
@@ -154,9 +157,9 @@ export default function MenDressCodePage() {
                     <div className="hidden md:block absolute -left-16 w-12 h-0.5 bg-foreground"></div>
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">Shoes</h3>
+                      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.shoes")}</h3>
                       <p className="text-gray-700 dark:text-gray-300 text-sm">
-                        Polished black formal dress shoes, typically Oxfords or similar formal footwear.
+                        {t("dressCodeMen.shoesDesc")}
                       </p>
                     </div>
                   </div>
@@ -169,7 +172,7 @@ export default function MenDressCodePage() {
           <section className="mb-20">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-                Real-Life Examples
+                {t("dressCodeMen.examples")}
               </h2>
               
               <div className="relative">
@@ -202,30 +205,30 @@ export default function MenDressCodePage() {
                 {/* First Column: Colors */}
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                    Please Avoid White and White-Like Shades
+                    {t("dressCodeMen.avoidWhite")}
                   </h2>
                   
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                    To honor the bride and maintain the special significance of white on this day, we kindly ask that guests avoid wearing white, ivory, cream, or very light neutral tones in any part of their attire.
+                    {t("dressCodeMen.avoidWhiteDesc")}
                   </p>
 
                   {/* Color Swatches */}
                   <div className="grid grid-cols-4 gap-3">
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-white"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">White</p>
+                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorWhite")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFFF0]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">Ivory</p>
+                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorIvory")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FAF0E6]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">Off-white</p>
+                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorOffWhite")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFDD0]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">Cream</p>
+                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorCream")}</p>
                     </div>
                   </div>
                 </div>
@@ -233,29 +236,29 @@ export default function MenDressCodePage() {
                 {/* Second Column: Informal Attire */}
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                    Please Avoid Informal Attire
+                    {t("dressCodeMen.avoidInformal")}
                   </h2>
                   
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                    To maintain the formal atmosphere of our wedding, please avoid the following items:
+                    {t("dressCodeMen.avoidInformalDesc")}
                   </p>
                   
                   <ul className="space-y-4 text-lg text-gray-700 dark:text-gray-300">
                     <li className="flex items-start">
                       <span className="mr-3 text-primary font-bold">•</span>
-                      <span>Sneakers or casual footwear</span>
+                      <span>{t("dressCodeMen.avoidSneakers")}</span>
                     </li>
                     <li className="flex items-start">
                       <span className="mr-3 text-primary font-bold">•</span>
-                      <span>T-shirts or casual shirts</span>
+                      <span>{t("dressCodeMen.avoidTshirts")}</span>
                     </li>
                     <li className="flex items-start">
                       <span className="mr-3 text-primary font-bold">•</span>
-                      <span>Polo shirts</span>
+                      <span>{t("dressCodeMen.avoidPolo")}</span>
                     </li>
                     <li className="flex items-start">
                       <span className="mr-3 text-primary font-bold">•</span>
-                      <span>Jeans or casual trousers</span>
+                      <span>{t("dressCodeMen.avoidJeans")}</span>
                     </li>
                   </ul>
                 </div>
@@ -267,7 +270,7 @@ export default function MenDressCodePage() {
           <section className="mb-12">
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic">
-                Thank you for taking the time to review our dress code guidelines. We truly appreciate your effort to follow these requirements and help make our wedding day as beautiful and harmonious as possible. We can't wait to celebrate with you!
+                {t("dressCodeMen.closing")}
               </p>
             </div>
           </section>
@@ -276,6 +279,14 @@ export default function MenDressCodePage() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+export default function MenDressCodePage() {
+  return (
+    <LanguageProvider>
+      <MenDressCodePageContent />
+    </LanguageProvider>
   )
 }
 

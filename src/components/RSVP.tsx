@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input"
 import { HelpCircle } from "lucide-react"
 import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from "./ui/input-group"
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 interface Guest {
   firstName: string
@@ -26,6 +27,7 @@ interface Guest {
 }
 
 export default function RSVP() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -84,11 +86,11 @@ export default function RSVP() {
       <div className="max-w-2xl mx-auto">
         <Card className="text-center">
           <CardHeader>
-            <CardTitle className="text-2xl text-green-700">Thank You!</CardTitle>
+            <CardTitle className="text-2xl text-green-700">{t("rsvp.thankYou")}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-lg text-gray-700">
-              Your RSVP has been received. We can't wait to celebrate with you!
+              {t("rsvp.thankYouMessage")}
             </p>
           </CardContent>
         </Card>
@@ -102,27 +104,23 @@ export default function RSVP() {
       <div className="max-w-2xl mx-auto">
         {/* Thank you message */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-green-700 mb-4">RSVP</h1>
+          <h1 className="text-4xl font-bold text-green-700 mb-4">{t("rsvp.title")}</h1>
           <p className="text-lg text-gray-700 leading-relaxed">
-            We are so excited to celebrate our special day with you! Your presence means the world to us, 
-            and we can't wait to share this beautiful moment together. Please let us know if you'll be 
-            joining us for our wedding celebration.
+            {t("rsvp.description")}
           </p>
           <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
             <p className="text-sm text-green-800">
-              <strong>👶 Kids Welcome!</strong> We'll have a professional nanny available to entertain 
-              children ages 0-12 during the celebration, so parents can enjoy the festivities worry-free.
+              <strong>{t("rsvp.kidsWelcome")}</strong>
             </p>
           </div>
           <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
             <p className="text-sm text-green-800">
-              <strong>🚌 Transportation!</strong> We'll provide transportation from the hotel to the venue and back.
-              Let us know if you would like to use this service, so that we can arrange accordingly.
+              <strong>{t("rsvp.transportation")}</strong>
             </p>
           </div>
           <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
             <p className="text-sm text-green-800">
-              <strong>🍔 Food Restrictions!</strong> Let us know if you have any food restrictions, so that we can accommodate you.
+              <strong>{t("rsvp.foodRestrictions")}</strong>
             </p>
           </div>
         </div>
@@ -130,7 +128,7 @@ export default function RSVP() {
         {/* RSVP Form */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl text-center">Please respond by filling out the form below</CardTitle>
+            <CardTitle className="text-xl text-center">{t("rsvp.formTitle")}</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -140,7 +138,7 @@ export default function RSVP() {
                   <Label 
                     htmlFor="firstName" //className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    First Name *
+                    {t("rsvp.firstName")} *
                   </Label>
                   <InputGroup>
                     <InputGroupInput 
@@ -183,7 +181,7 @@ export default function RSVP() {
                 <Label 
                     htmlFor="firstName" //className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Last Name *
+                    {t("rsvp.lastName")} *
                   </Label>
                   <InputGroup>
                     <InputGroupInput 
@@ -209,7 +207,7 @@ export default function RSVP() {
 
               <div>
                 <Label htmlFor="email">
-                  Email Address *
+                  {t("rsvp.email")} *
                 </Label>
                 <InputGroup>
                   <InputGroupInput 
@@ -225,7 +223,7 @@ export default function RSVP() {
 
               <div>
                 <Label>
-                  Will you be joining us? *
+                  {t("rsvp.willJoin")} *
                 </Label>
                 <div className="space-y-2">
                   <label className="flex items-center">
@@ -237,7 +235,7 @@ export default function RSVP() {
                       onChange={handleInputChange}
                       className="mr-2"
                     />
-                    <span>Yes, I'll be there!</span>
+                    <span>{t("rsvp.yes")}</span>
                   </label>
                   <label className="flex items-center">
                     <input
@@ -248,7 +246,7 @@ export default function RSVP() {
                       onChange={handleInputChange}
                       className="mr-2"
                     />
-                    <span>Sorry, I can't make it</span>
+                    <span>{t("rsvp.no")}</span>
                   </label>
                 </div>
               </div>
@@ -257,18 +255,18 @@ export default function RSVP() {
               {formData.isAttending === "yes" && (
                 <div>
                   <Label htmlFor="transportation" className="block text-sm font-medium text-gray-700 mb-2">
-                    Does your party need transportation? *
+                    {t("rsvp.needsTransportation")} *
                   </Label>
                   <Select
                     value={formData.needsTransportation}
                     onValueChange={(value) => setFormData(prev => ({ ...prev, needsTransportation: value }))}
                   >
                     <SelectTrigger id="transportation" className="w-full">
-                      <SelectValue placeholder="Select an option" />
+                      <SelectValue placeholder={t("rsvp.selectNumber")} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="yes">Yes, we need transportation</SelectItem>
-                      <SelectItem value="no">No, we don't need transportation</SelectItem>
+                      <SelectItem value="yes">{t("rsvp.transportationYes")}</SelectItem>
+                      <SelectItem value="no">{t("rsvp.transportationNo")}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -278,14 +276,14 @@ export default function RSVP() {
               {formData.isAttending === "yes" && (
                 <div>
                   <Label htmlFor="guestCount" className="block text-sm font-medium text-gray-700 mb-2">
-                    How many people will be joining besides yourself?
+                    {t("rsvp.guestCount")}
                   </Label>
                   <Select
                     value={formData.guestCount > 0 ? formData.guestCount.toString() : ""}
                     onValueChange={handleGuestCountChange}
                   >
                     <SelectTrigger id="guestCount" className="w-full">
-                      <SelectValue placeholder="Select number of people" />
+                      <SelectValue placeholder={t("rsvp.selectNumber")} />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="1">1</SelectItem>
@@ -304,36 +302,36 @@ export default function RSVP() {
                 <div className="space-y-4">
                   <div>
                     <Label htmlFor="mainGuestFoodRestrictions" className="block text-sm font-medium text-gray-700 mb-2">
-                      Food Restrictions or Dietary Preferences (Yourself)
+                      {t("rsvp.foodRestrictionsTitle")}
                     </Label>
                     <Select
                       value={formData.foodRestrictions}
                       onValueChange={(value) => setFormData(prev => ({ ...prev, foodRestrictions: value }))}
                     >
                       <SelectTrigger id="mainGuestFoodRestrictions" className="w-full">
-                        <SelectValue placeholder="Select dietary preference" />
+                        <SelectValue placeholder={t("rsvp.selectDietary")} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="none">None</SelectItem>
-                        <SelectItem value="vegetarian">Vegetarian</SelectItem>
-                        <SelectItem value="vegan">Vegan</SelectItem>
-                        <SelectItem value="gluten-free">Gluten-free</SelectItem>
-                        <SelectItem value="dairy-free">Dairy-free</SelectItem>
-                        <SelectItem value="nut-allergy">Nut Allergy</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
+                        <SelectItem value="none">{t("rsvp.dietaryNone")}</SelectItem>
+                        <SelectItem value="vegetarian">{t("rsvp.dietaryVegetarian")}</SelectItem>
+                        <SelectItem value="vegan">{t("rsvp.dietaryVegan")}</SelectItem>
+                        <SelectItem value="gluten-free">{t("rsvp.dietaryGlutenFree")}</SelectItem>
+                        <SelectItem value="dairy-free">{t("rsvp.dietaryDairyFree")}</SelectItem>
+                        <SelectItem value="nut-allergy">{t("rsvp.dietaryNutAllergy")}</SelectItem>
+                        <SelectItem value="other">{t("rsvp.dietaryOther")}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                   {formData.foodRestrictions === "other" && (
                     <div>
                       <Label htmlFor="mainGuestAdditionalFoodNotes" className="block text-sm font-medium text-gray-700 mb-2">
-                        Please specify additional food restrictions or notes
+                        {t("rsvp.specifyFoodRestrictions")}
                       </Label>
                       <Textarea
                         id="mainGuestAdditionalFoodNotes"
                         value={formData.additionalFoodNotes}
                         onChange={(e) => setFormData(prev => ({ ...prev, additionalFoodNotes: e.target.value }))}
-                        placeholder="Please describe any food restrictions or dietary requirements..."
+                        placeholder={t("rsvp.describeFoodRestrictions")}
                         className="w-full"
                       />
                     </div>
@@ -345,18 +343,18 @@ export default function RSVP() {
               {formData.isAttending === "yes" && (
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-gray-700">
-                    Additional Guest Information
+                    {t("rsvp.additionalGuests")}
                   </h3>
                   {guests.map((guest, index) => (
                     <Card key={index} className="bg-gray-50">
                       <CardContent className="pt-4">
                         <h4 className="text-sm font-medium text-gray-600 mb-3">
-                          Guest {index + 1}
+                          {t("rsvp.guest")} {index + 1}
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">
-                              First Name
+                              {t("rsvp.guestFirstName")}
                             </label>
                             <input
                               type="text"
@@ -367,7 +365,7 @@ export default function RSVP() {
                           </div>
                           <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">
-                              Last Name
+                              {t("rsvp.guestLastName")}
                             </label>
                             <input
                               type="text"
@@ -386,43 +384,43 @@ export default function RSVP() {
                               className="mr-2"
                             />
                             <span className="text-sm text-gray-700">
-                              This guest is a child (0-12 years old)
+                              {t("rsvp.guestIsKid")}
                             </span>
                           </label>
                         </div>
                         <div className="mt-4 space-y-4">
                           <div>
                             <Label htmlFor={`guest-${index}-food-restrictions`} className="block text-sm font-medium text-gray-700 mb-2">
-                              Food Restrictions or Dietary Preferences
+                              {t("rsvp.guestFoodRestrictions")}
                             </Label>
                             <Select
                               value={guest.foodRestrictions}
                               onValueChange={(value) => handleGuestChange(index, "foodRestrictions", value)}
                             >
                               <SelectTrigger id={`guest-${index}-food-restrictions`} className="w-full">
-                                <SelectValue placeholder="Select dietary preference" />
+                                <SelectValue placeholder={t("rsvp.selectDietary")} />
                               </SelectTrigger>
                               <SelectContent>
-                                <SelectItem value="none">None</SelectItem>
-                                <SelectItem value="vegetarian">Vegetarian</SelectItem>
-                                <SelectItem value="vegan">Vegan</SelectItem>
-                                <SelectItem value="gluten-free">Gluten-free</SelectItem>
-                                <SelectItem value="dairy-free">Dairy-free</SelectItem>
-                                <SelectItem value="nut-allergy">Nut Allergy</SelectItem>
-                                <SelectItem value="other">Other</SelectItem>
+                                <SelectItem value="none">{t("rsvp.dietaryNone")}</SelectItem>
+                                <SelectItem value="vegetarian">{t("rsvp.dietaryVegetarian")}</SelectItem>
+                                <SelectItem value="vegan">{t("rsvp.dietaryVegan")}</SelectItem>
+                                <SelectItem value="gluten-free">{t("rsvp.dietaryGlutenFree")}</SelectItem>
+                                <SelectItem value="dairy-free">{t("rsvp.dietaryDairyFree")}</SelectItem>
+                                <SelectItem value="nut-allergy">{t("rsvp.dietaryNutAllergy")}</SelectItem>
+                                <SelectItem value="other">{t("rsvp.dietaryOther")}</SelectItem>
                               </SelectContent>
                             </Select>
                           </div>
                           {guest.foodRestrictions === "other" && (
                             <div>
                               <Label htmlFor={`guest-${index}-additional-food-notes`} className="block text-sm font-medium text-gray-700 mb-2">
-                                Please specify additional food restrictions or notes
+                                {t("rsvp.specifyFoodRestrictions")}
                               </Label>
                               <Textarea
                                 id={`guest-${index}-additional-food-notes`}
                                 value={guest.additionalFoodNotes}
                                 onChange={(e) => handleGuestChange(index, "additionalFoodNotes", e.target.value)}
-                                placeholder="Please describe any food restrictions or dietary requirements..."
+                                placeholder={t("rsvp.describeFoodRestrictions")}
                                 className="w-full"
                               />
                             </div>
@@ -439,7 +437,7 @@ export default function RSVP() {
                   type="submit" 
                   className="w-full bg-green-700 hover:bg-green-800 text-white py-3"
                 >
-                  Submit RSVP
+                  {t("rsvp.submit")}
                 </Button>
               </div>
             </form>

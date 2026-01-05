@@ -1,9 +1,15 @@
+"use client"
+
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { LanguageProvider } from "@/contexts/LanguageContext"
 
-export default function DressCodePage() {
+function DressCodePageContent() {
+  const { t } = useLanguage()
+  
   return (
     <div className="min-h-screen">
       <Header />
@@ -12,10 +18,10 @@ export default function DressCodePage() {
           {/* Page Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
-              Dress Code
+              {t("dressCode.title")}
             </h1>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Choose your style and discover our dress code recommendations
+              {t("dressCode.description")}
             </p>
           </div>
 
@@ -35,10 +41,10 @@ export default function DressCodePage() {
                   
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h2 className="text-3xl font-bold text-white mb-2">Women</h2>
-                    <p className="text-white/90 text-lg">Elegant wedding attire</p>
+                    <h2 className="text-3xl font-bold text-white mb-2">{t("dressCode.women")}</h2>
+                    <p className="text-white/90 text-lg">{t("dressCode.womenDesc")}</p>
                     <div className="mt-4 flex items-center text-white/90">
-                      <span className="text-sm font-medium">View details</span>
+                      <span className="text-sm font-medium">{t("dressCode.viewDetails")}</span>
                       <svg
                         className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform"
                         fill="none"
@@ -72,10 +78,10 @@ export default function DressCodePage() {
                   
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h2 className="text-3xl font-bold text-white mb-2">Men</h2>
-                    <p className="text-white/90 text-lg">Formal tail coat attire</p>
+                    <h2 className="text-3xl font-bold text-white mb-2">{t("dressCode.men")}</h2>
+                    <p className="text-white/90 text-lg">{t("dressCode.menDesc")}</p>
                     <div className="mt-4 flex items-center text-white/90">
-                      <span className="text-sm font-medium">View details</span>
+                      <span className="text-sm font-medium">{t("dressCode.viewDetails")}</span>
                       <svg
                         className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform"
                         fill="none"
@@ -99,6 +105,14 @@ export default function DressCodePage() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+export default function DressCodePage() {
+  return (
+    <LanguageProvider>
+      <DressCodePageContent />
+    </LanguageProvider>
   )
 }
 

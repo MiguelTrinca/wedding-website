@@ -3,8 +3,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { MapPin, Clock, Phone, Mail } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function Location() {
+  const { t } = useLanguage()
   // Placeholder images for the carousel
   const locationImages = [
     {
@@ -30,10 +32,10 @@ export default function Location() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Venue
+            {t("location.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Join us at the beautiful Quinta do Furao for our special day
+            {t("location.description")}
           </p>
         </div>
 
@@ -47,13 +49,13 @@ export default function Location() {
                   Quinta do Furao
                 </CardTitle>
                 <CardDescription className="text-lg">
-                  A stunning venue surrounded by nature, perfect for our celebration
+                  {t("location.cardDescription")}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-green-500" />
-                  <span>Reception: 5:00 PM</span>
+                  <span>{t("location.reception")}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-green-500" />
@@ -73,7 +75,7 @@ export default function Location() {
             {/* Map Placeholder */}
             <Card>
               <CardHeader>
-                <CardTitle>Quinta do Furao Map</CardTitle>
+                <CardTitle>{t("location.mapTitle")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">

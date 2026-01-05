@@ -3,17 +3,20 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { MapPin, Clock, Phone, Mail, Church } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function Ceremony() {
+  const { t } = useLanguage()
+  
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Ceremony
+            {t("ceremony.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We will exchange vows at the historic Sé do Funchal Cathedral
+            {t("ceremony.description")}
           </p>
         </div>
 
@@ -27,13 +30,13 @@ export default function Ceremony() {
                   Sé do Funchal
                 </CardTitle>
                 <CardDescription className="text-lg">
-                  The cathedral in the heart of Funchal, a beautiful setting for our ceremony
+                  {t("ceremony.cardDescription")}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-green-600" />
-                  <span>Ceremony: 2:30 PM</span>
+                  <span>{t("ceremony.time")}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-green-600" />
@@ -50,10 +53,10 @@ export default function Ceremony() {
 
                 <div className="pt-4 flex flex-wrap gap-3">
                   <Button asChild className="bg-green-700 hover:bg-green-800 text-white">
-                    <a href="/nearby-hotels">Nearby Hotels</a>
+                    <a href="/nearby-hotels">{t("ceremony.nearbyHotels")}</a>
                   </Button>
                   <Button variant="outline" asChild>
-                    <a href="/dress-code">Dress Code</a>
+                    <a href="/dress-code">{t("ceremony.dressCode")}</a>
                   </Button>
                 </div>
               </CardContent>
@@ -64,8 +67,8 @@ export default function Ceremony() {
           <div>
             <Card>
               <CardHeader>
-                <CardTitle>Se do Funchal Map</CardTitle>
-                <CardDescription>Sé do Funchal Cathedral</CardDescription>
+                <CardTitle>{t("ceremony.mapTitle")}</CardTitle>
+                <CardDescription>{t("ceremony.mapDescription")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="w-full h-80 rounded-lg overflow-hidden bg-gray-200">

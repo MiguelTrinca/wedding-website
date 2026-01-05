@@ -1,6 +1,11 @@
+"use client"
+
 import { Heart, Mail, Phone, MapPin, Instagram } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function Footer() {
+  const { t } = useLanguage()
+  
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -12,16 +17,16 @@ export default function Footer() {
               <span className="text-2xl font-bold">Beatriz & Miguel</span>
             </div>
             <p className="text-gray-300 mb-4">
-              June 20th, 2026
+              {t("footer.date")}
             </p>
             <p className="text-gray-300">
-              Quinta do Furao, Madeira, Portugal
+              {t("footer.venue")}
             </p>
           </div>
 
           {/* Contact Information */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-4">{t("footer.contact")}</h3>
             <div className="space-y-3">
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <Mail className="h-5 w-5 text-green-500" />
@@ -52,7 +57,7 @@ export default function Footer() {
 
           {/* Social & Quick Links */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-semibold mb-4">Follow Our Journey</h3>
+            <h3 className="text-xl font-semibold mb-4">{t("footer.follow")}</h3>
             <div className="space-y-3">
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <Instagram className="h-5 w-5 text-green-500" />
@@ -67,7 +72,7 @@ export default function Footer() {
               </div>
               <div className="pt-4">
                 <p className="text-sm text-gray-400">
-                  We can't wait to celebrate with you!
+                  {t("footer.message")}
                 </p>
               </div>
             </div>
@@ -77,7 +82,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Beatriz & Miguel Wedding. Made with ❤️ for our special day.
+            {t("footer.copyright")}
           </p>
         </div>
       </div>

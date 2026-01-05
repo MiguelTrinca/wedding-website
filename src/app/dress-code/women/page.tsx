@@ -1,7 +1,13 @@
+"use client"
+
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { LanguageProvider } from "@/contexts/LanguageContext"
 
-export default function WomenDressCodePage() {
+function WomenDressCodePageContent() {
+  const { t } = useLanguage()
+  
   return (
     <div className="min-h-screen">
       <Header />
@@ -11,10 +17,10 @@ export default function WomenDressCodePage() {
           {/* Title/Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Women's Dress Code
+              {t("dressCodeWomen.title")}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              This page provides guidance to help guests choose appropriate formal attire for our special day. We want everyone to feel comfortable and elegant while respecting our wedding party's color choices.
+              {t("dressCodeWomen.description")}
             </p>
           </div>
 
@@ -22,23 +28,23 @@ export default function WomenDressCodePage() {
           <section className="mb-20">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Formal Attire
+                {t("dressCodeWomen.formalAttire")}
               </h2>
               <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
-                  We invite our guests to dress in formal attire that reflects the elegance of this special occasion.
+                  {t("dressCodeWomen.formalAttireDesc1")}
                 </p>
                 <div className="space-y-3 mt-6">
-                  <p className="font-semibold text-foreground">Recommended attire includes:</p>
+                  <p className="font-semibold text-foreground">{t("dressCodeWomen.recommended")}</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Long dresses and elegant evening gowns</li>
-                    <li>Refined fabrics such as silk, chiffon, satin, or lace</li>
-                    <li>Sophisticated silhouettes that complement the formal setting</li>
-                    <li>Classic and timeless styles that celebrate the occasion</li>
+                    <li>{t("dressCodeWomen.recommended1")}</li>
+                    <li>{t("dressCodeWomen.recommended2")}</li>
+                    <li>{t("dressCodeWomen.recommended3")}</li>
+                    <li>{t("dressCodeWomen.recommended4")}</li>
                   </ul>
                 </div>
                 <p className="mt-6">
-                  The goal is to look polished and celebratory while ensuring the focus remains on the wedding party's chosen color palette.
+                  {t("dressCodeWomen.formalAttireDesc2")}
                 </p>
               </div>
             </div>
@@ -48,7 +54,7 @@ export default function WomenDressCodePage() {
           <section className="mb-20">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-                Examples of Formal Attire
+                {t("dressCodeWomen.examples")}
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div className="aspect-[3/4] overflow-hidden rounded-lg">
@@ -145,17 +151,17 @@ export default function WomenDressCodePage() {
           <section className="mb-20">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-                Color Guidelines
+                {t("dressCodeWomen.colorGuidelines")}
               </h2>
               
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {/* Left: Text Explanation */}
                 <div>
                   <h3 className="text-2xl font-semibold text-foreground mb-4">
-                    Please Avoid White and White-Like Shades
+                    {t("dressCodeWomen.avoidWhite")}
                   </h3>
                   <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                    To honor the bride and maintain the special significance of white on this day, we kindly ask that guests avoid wearing white, ivory, cream, and very light neutral tones.
+                    {t("dressCodeWomen.avoidWhiteDesc")}
                   </p>
                 </div>
 
@@ -164,19 +170,19 @@ export default function WomenDressCodePage() {
                   <div className="grid grid-cols-4 gap-3">
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-white"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">White</p>
+                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorWhite")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFFF0]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">Ivory</p>
+                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorIvory")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FAF0E6]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">Off-white</p>
+                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorOffWhite")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFDD0]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">Cream</p>
+                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorCream")}</p>
                     </div>
                   </div>
                 </div>
@@ -189,10 +195,10 @@ export default function WomenDressCodePage() {
           <section className="mb-20">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
-                All Other Formal Colors Are Welcome
+                {t("dressCodeWomen.otherColors")}
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center leading-relaxed">
-                We encourage guests to choose elegant colors outside shades of white. Feel free to explore beautiful jewel tones, rich neutrals, and sophisticated hues that make you feel confident and celebratory. We know you will look amazing in anything you wear!
+                {t("dressCodeWomen.otherColorsDesc")}
               </p>
               
               <div className="grid grid-cols-4 md:grid-cols-8 gap-3 max-w-3xl mx-auto">
@@ -268,7 +274,7 @@ export default function WomenDressCodePage() {
           <section className="mb-12">
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic">
-                Thank you for taking the time to review our dress code guidelines. We truly appreciate your effort to respect these choices and help make our wedding day as beautiful and harmonious as possible. We can't wait to celebrate with you!
+                {t("dressCodeWomen.closing")}
               </p>
             </div>
           </section>
@@ -277,6 +283,14 @@ export default function WomenDressCodePage() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+export default function WomenDressCodePage() {
+  return (
+    <LanguageProvider>
+      <WomenDressCodePageContent />
+    </LanguageProvider>
   )
 }
 
