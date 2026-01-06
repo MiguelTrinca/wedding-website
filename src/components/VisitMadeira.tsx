@@ -31,7 +31,7 @@ export default function VisitMadeira() {
     },
     {
       title: t("visitMadeira.restaurants"),
-      href: "/restaurants",
+      href: "/activities#restaurants",
       description: t("visitMadeira.restaurantsDesc"),
       delayMs: 2000,
       images: [
@@ -43,7 +43,7 @@ export default function VisitMadeira() {
     },
     {
       title: t("visitMadeira.transportation"),
-      href: "/transportation",
+      href: "/activities#transportation",
       description: t("visitMadeira.transportationDesc"),
       delayMs: 1000,
       images: [

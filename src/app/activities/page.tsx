@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -102,6 +103,22 @@ function ActivitiesPageContent() {
     },
   ]
 
+  // Handle hash navigation on page load
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash
+      if (hash) {
+        // Small delay to ensure the page is fully rendered
+        setTimeout(() => {
+          const element = document.querySelector(hash)
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" })
+          }
+        }, 100)
+      }
+    }
+  }, [])
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -127,7 +144,7 @@ function ActivitiesPageContent() {
         </section>
 
         {/* Restaurants Section */}
-        <section className="py-20 bg-white">
+        <section id="restaurants" className="py-20 bg-white scroll-mt-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
@@ -147,7 +164,7 @@ function ActivitiesPageContent() {
         </section>
 
         {/* Transportation Section */}
-        <section className="py-20 bg-gray-50">
+        <section id="transportation" className="py-20 bg-gray-50 scroll-mt-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
