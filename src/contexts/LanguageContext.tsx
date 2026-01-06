@@ -65,6 +65,50 @@ const translations: Record<Language, Record<string, string>> = {
     "visitMadeira.transportationDesc": "How to get around: car rentals, buses, taxis, and tips.",
     "visitMadeira.explore": "Explore",
     
+    // Activities Page
+    "activities.title": "Activities",
+    "activities.description": "Discover amazing things to do in Madeira",
+    "activities.explore": "Explore",
+    
+    // Activities
+    "activities.hiking": "Hiking",
+    "activities.hikingDesc": "Explore Madeira's stunning levada trails and mountain paths",
+    "activities.beach": "Beach & Swimming",
+    "activities.beachDesc": "Enjoy the beautiful beaches and natural pools",
+    "activities.viewpoints": "Viewpoints",
+    "activities.viewpointsDesc": "Visit breathtaking viewpoints across the island",
+    "activities.waterSports": "Water Sports",
+    "activities.waterSportsDesc": "Try diving, surfing, or whale watching",
+    "activities.gardens": "Gardens",
+    "activities.gardensDesc": "Explore Madeira's beautiful botanical and tropical gardens",
+    "activities.cableCar": "Cable Car",
+    "activities.cableCarDesc": "Take a scenic cable car ride with panoramic views",
+    "activities.wineTasting": "Wine Tasting",
+    "activities.wineTastingDesc": "Sample Madeira's famous wines and local cuisine",
+    "activities.fishing": "Fishing",
+    "activities.fishingDesc": "Experience deep sea fishing in the Atlantic",
+    
+    // Restaurants
+    "restaurants.title": "Our Top 3 Restaurants",
+    "restaurants.description": "Discover our favorite dining spots in Madeira",
+    "restaurants.kampo": "Kampo",
+    "restaurants.kampoDesc": "Eat well and sleep",
+    "restaurants.kampoLocation": "Funchal, Madeira",
+    "restaurants.beerGarden": "Beer Garden",
+    "restaurants.beerGardenDesc": "Must try the chocolate mousse and eat a \"Picado\"",
+    "restaurants.beerGardenLocation": "Funchal, Madeira",
+    "restaurants.santoAntonio": "Santo Antonio",
+    "restaurants.santoAntonioDesc": "The best \"Espetada\" that you can eat",
+    "restaurants.santoAntonioLocation": "Madeira",
+    
+    // Transportation
+    "transportation.title": "Transportation",
+    "transportation.description": "Information about getting around Madeira",
+    "transportation.weddingTransport": "Wedding Transportation",
+    "transportation.weddingTransportDesc": "There will be transportation from the Ceremony (Funchal) to the Venue (Quinta do Furao) and back.",
+    "transportation.carRental": "Car Rental",
+    "transportation.carRentalDesc": "The island is well equipped with numerous car renting companies. We recommend \"Baia Car\" a friend that rents cars for great price. And of course you can also rent a car in most common rent a car company. Like Hertz, Europcar etc.",
+    
     // Footer
     "footer.date": "June 20th, 2026",
     "footer.venue": "Quinta do Furao, Madeira, Portugal",
@@ -225,6 +269,50 @@ const translations: Record<Language, Record<string, string>> = {
     "visitMadeira.transportation": "Transporte",
     "visitMadeira.transportationDesc": "Como se deslocar: aluguer de carros, autocarros, táxis e dicas.",
     "visitMadeira.explore": "Explorar",
+    
+    // Activities Page
+    "activities.title": "Atividades",
+    "activities.description": "Descubra coisas incríveis para fazer na Madeira",
+    "activities.explore": "Explorar",
+    
+    // Activities
+    "activities.hiking": "Caminhadas",
+    "activities.hikingDesc": "Explore os trilhos deslumbrantes das levadas e caminhos de montanha da Madeira",
+    "activities.beach": "Praia e Natação",
+    "activities.beachDesc": "Desfrute das belas praias e piscinas naturais",
+    "activities.viewpoints": "Miradouros",
+    "activities.viewpointsDesc": "Visite miradouros deslumbrantes pela ilha",
+    "activities.waterSports": "Desportos Aquáticos",
+    "activities.waterSportsDesc": "Experimente mergulho, surf ou observação de baleias",
+    "activities.gardens": "Jardins",
+    "activities.gardensDesc": "Explore os belos jardins botânicos e tropicais da Madeira",
+    "activities.cableCar": "Teleférico",
+    "activities.cableCarDesc": "Faça uma viagem panorâmica de teleférico com vistas deslumbrantes",
+    "activities.wineTasting": "Prova de Vinhos",
+    "activities.wineTastingDesc": "Prove os famosos vinhos da Madeira e a culinária local",
+    "activities.fishing": "Pesca",
+    "activities.fishingDesc": "Experimente a pesca em alto mar no Atlântico",
+    
+    // Restaurants
+    "restaurants.title": "Os Nossos 3 Melhores Restaurantes",
+    "restaurants.description": "Descubra os nossos locais de refeição favoritos na Madeira",
+    "restaurants.kampo": "Kampo",
+    "restaurants.kampoDesc": "Coma bem e durma",
+    "restaurants.kampoLocation": "Funchal, Madeira",
+    "restaurants.beerGarden": "Beer Garden",
+    "restaurants.beerGardenDesc": "Deve experimentar o mousse de chocolate e comer um \"Picado\"",
+    "restaurants.beerGardenLocation": "Funchal, Madeira",
+    "restaurants.santoAntonio": "Santo Antonio",
+    "restaurants.santoAntonioDesc": "A melhor \"Espetada\" que pode comer",
+    "restaurants.santoAntonioLocation": "Madeira",
+    
+    // Transportation
+    "transportation.title": "Transporte",
+    "transportation.description": "Informações sobre como se deslocar na Madeira",
+    "transportation.weddingTransport": "Transporte do Casamento",
+    "transportation.weddingTransportDesc": "Haverá transporte da Cerimónia (Funchal) para o Local (Quinta do Furao) e de volta.",
+    "transportation.carRental": "Aluguer de Carros",
+    "transportation.carRentalDesc": "A ilha está bem equipada com inúmeras empresas de aluguer de carros. Recomendamos \"Baia Car\" um amigo que aluga carros a um ótimo preço. E claro, também pode alugar um carro nas empresas de aluguer de carros mais comuns. Como Hertz, Europcar, etc.",
     
     // Footer
     "footer.date": "20 de Junho de 2026",
