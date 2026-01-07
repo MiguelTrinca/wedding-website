@@ -218,6 +218,22 @@ const translations: Record<Language, Record<string, string>> = {
     "dressCodeMen.avoidPolo": "Polo shirts",
     "dressCodeMen.avoidJeans": "Jeans or casual trousers",
     "dressCodeMen.closing": "Thank you for taking the time to review our dress code guidelines. We truly appreciate your effort to follow these requirements and help make our wedding day as beautiful and harmonious as possible. We can't wait to celebrate with you!",
+
+    // HoneyPot
+    "honeyPot.title": "Honey Pot",
+    "honeyPot.description": "We are so excited to celebrate our special day with you! Your presence means the world to us, and we can't wait to share this beautiful moment together. Please let us know if you'll be joining us for our wedding celebration.",
+    "honeyPot.goalProgress": "Goal Progress",
+    "honeyPot.progressMessage": "We are so excited to celebrate our special day with you! Your presence means the world to us, and we can't wait to share this beautiful moment together. Please let us know if you'll be joining us for our wedding celebration.",
+    "honeyPot.donate": "Donate",
+    "honeyPot.thankYouTitle": "Thank You",
+    "honeyPot.thankYouMessage": "We are so excited to celebrate our special day with you! Your presence means the world to us, and we can't wait to share this beautiful moment together. Please let us know if you'll be joining us for our wedding celebration.",
+    "honeyPot.modalTitle": "Donate to our Honey Pot",
+    "honeyPot.phoneNumber": "Phone Number",
+    "honeyPot.accountHolder": "Account Holder",
+    "honeyPot.reference": "Reference",
+    "honeyPot.modalNote": "Note: If you are not able to donate, please let us know so we can arrange a different way for you to contribute to our special day.",
+    "honeyPot.close": "Close",
+
   },
   pt: {
     // Header
@@ -423,6 +439,20 @@ const translations: Record<Language, Record<string, string>> = {
     "dressCodeMen.avoidPolo": "Camisas polo",
     "dressCodeMen.avoidJeans": "Jeans ou calças casuais",
     "dressCodeMen.closing": "Obrigado por terem tirado tempo para rever as nossas diretrizes de código de vestuário. Apreciamos verdadeiramente o vosso esforço para seguir estes requisitos e ajudar a tornar o nosso dia de casamento o mais bonito e harmonioso possível. Mal podemos esperar para celebrar convosco!",
+
+    // HoneyPot
+    "honeyPot.title": "Pote de Mel",
+    "honeyPot.description": "Estamos muito entusiasmados por celebrar o nosso dia especial convosco! A vossa presença significa tudo para nós, e mal podemos esperar para partilhar este momento bonito juntos. Por favor, digam-nos se vão estar presentes na nossa celebração de casamento.",
+    "honeyPot.goalProgress": "Progresso do objetivo",
+    "honeyPot.donate": "Doar",
+    "honeyPot.modalTitle": "Doar para o nosso Pote de Mel",
+    "honeyPot.thankYouTitle": "Obrigado",
+    "honeyPot.thankYouMessage": "Estamos muito entusiasmados por celebrar o nosso dia especial convosco! A vossa presença significa tudo para nós, e mal podemos esperar para partilhar este momento bonito juntos. Por favor, digam-nos se vão estar presentes na nossa celebração de casamento.",
+    "honeyPot.phoneNumber": "Número de Telemóvel",
+    "honeyPot.accountHolder": "Nome do Titular da Conta",
+    "honeyPot.reference": "Referência",
+    "honeyPot.modalNote": "Nota: Se não é possível doar, por favor digam-nos para que possamos arranjar uma forma diferente para vós contribuir para o nosso dia especial.",
+    "honeyPot.close": "Fechar",
   },
 }
 
