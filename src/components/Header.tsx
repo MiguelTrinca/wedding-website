@@ -39,7 +39,7 @@ export default function Header() {
             {t("nav.dressCode")}
           </Link>
           <Link 
-            href="/transportation" 
+            href="/activities#transportation"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             {t("nav.transportation")}
