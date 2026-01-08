@@ -113,8 +113,8 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.date": "June 20th, 2026",
     "footer.venue": "Quinta do Furao, Madeira, Portugal",
     "footer.contact": "Contact Us",
-    "footer.follow": "Follow Our Journey",
-    "footer.message": "We can't wait to celebrate with you!",
+    //"footer.follow": "Follow Our Journey",
+    //"footer.message": "We can't wait to celebrate with you!",
     "footer.copyright": "© 2024 Beatriz & Miguel Wedding. Made with ❤️ for our special day.",
     
     // RSVP
@@ -334,8 +334,8 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.date": "20 de Junho de 2026",
     "footer.venue": "Quinta do Furao, Madeira, Portugal",
     "footer.contact": "Contacte-nos",
-    "footer.follow": "Sigam a Nossa Jornada",
-    "footer.message": "Mal podemos esperar para celebrar convosco!",
+    //"footer.follow": "Sigam a Nossa Jornada",
+    //"footer.message": "Mal podemos esperar para celebrar convosco!",
     "footer.copyright": "© 2024 Casamento Beatriz & Miguel. Feito com ❤️ para o nosso dia especial.",
     
     // RSVP
