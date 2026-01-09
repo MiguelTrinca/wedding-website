@@ -36,47 +36,78 @@ function HoneyPotPageContent() {
         {/* Progress Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <Card>
-                <div className="relative h-72 overflow-hidden rounded-t-lg">
-                  <img
-                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200"
-                    alt="Honeymoon destination placeholder"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                
+                {/* Left Column – Image & Message */}
+                <Card className="overflow-hidden">
+                  <div className="relative h-72">
+                    <img
+                      src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200"
+                      alt="Honeymoon destination placeholder"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
-                <CardHeader>
-                  <CardTitle>{t("honeyPot.goalProgress")}</CardTitle>
-                </CardHeader>
+                  <CardHeader>
+                    <CardTitle>{t("honeyPot.goalProgress")}</CardTitle>
+                  </CardHeader>
 
-                <CardContent className="space-y-4">
-                  <p className="text-gray-600">
-                    {t("honeyPot.progressMessage")}
-                  </p>
+                  <CardContent>
+                    <p className="text-gray-600">
+                      {t("honeyPot.progressMessage")}
+                    </p>
+                  </CardContent>
+                </Card>
 
-                  {/* Progress Bar */}
-                  <div>
-                    <div className="flex justify-between text-sm text-gray-600 mb-1">
-                      <span>
-                        €{currentAmount.toLocaleString()}
-                      </span>
-                      <span>
-                        €{goalAmount.toLocaleString()}
-                      </span>
+
+                {/* Right Column – Vertical Progress Visualization */}
+                {/* Right Column – Vertical Progress Visualization */}
+                <div className="flex flex-col items-center gap-6">
+                  
+                  {/* Progress Percentage */}
+                  <h3 className="text-3xl font-bold text-gray-900">
+                    {Math.round(progress)}%
+                  </h3>
+
+                  <div className="flex items-center gap-6">
+                    {/* Vertical Bar */}
+                    <div className="relative h-96 w-10">
+                      {/* Background */}
+                      <div className="absolute inset-0 bg-gray-200 rounded-full overflow-hidden">
+                        {/* Filled Progress */}
+                        <div
+                          className="absolute bottom-0 w-full bg-primary transition-all duration-700"
+                          style={{ height: `${progress}%` }}
+                        />
+                      </div>
+
+                      {/* Milestone Lines */}
+                      {[25, 50, 75].map((value) => (
+                        <div
+                          key={value}
+                          className="absolute left-0 w-full h-px bg-gray-400"
+                          style={{ bottom: `${value}%` }}
+                        />
+                      ))}
                     </div>
-                    <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-primary transition-all"
-                        style={{ width: `${progress}%` }}
-                      />
+
+                    {/* Percentage Labels */}
+                    <div className="flex flex-col justify-between h-96 text-sm text-gray-600">
+                      <span>100%</span>
+                      <span>75%</span>
+                      <span>50%</span>
+                      <span>25%</span>
+                      <span>0%</span>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+
+              </div>
             </div>
           </div>
         </section>
+
 
         {/* Donate Section */}
         <section className="py-20 bg-gray-50">
