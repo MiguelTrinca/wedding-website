@@ -60,8 +60,6 @@ function HoneyPotPageContent() {
                   </CardContent>
                 </Card>
 
-
-                {/* Right Column – Vertical Progress Visualization */}
                 {/* Right Column – Vertical Progress Visualization */}
                 <div className="flex flex-col items-center gap-6">
                   
