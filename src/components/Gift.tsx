@@ -106,7 +106,9 @@ function WishlistCard() {
       {hovered && (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="pointer-events-auto">
-              <Button onClick={() => window.open("https://easywishlist.app/w/w22h1eca8/casamento-teste", "_blank")} size="lg">{t("gift.gift")}</Button>
+              <Link href="/gift" prefetch={false}>
+                <Button size="lg">{t("gift.gift")}</Button>
+              </Link>
           </div>
         </div>
       )}
