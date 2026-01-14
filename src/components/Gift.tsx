@@ -33,10 +33,10 @@ export default function Gift() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
-            {t("gift.title")}
+            {t("giftSectiontitle")}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            {t("gift.description")}
+            {t("giftSectiondescription")}
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export default function Gift() {
 
 function WishlistCard() {
   const { t } = useLanguage()
-  const wishlistItems = t("gift.wishlist") === "Lista de Desejos" ? wishlistItemsPt : wishlistItemsEn
+  const wishlistItems = t("giftSectionwishlist") === "Lista de Desejos" ? wishlistItemsPt : wishlistItemsEn
   const [hovered, setHovered] = useState(false)
   const [checkedIndex, setCheckedIndex] = useState<number | null>(null)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
@@ -80,7 +80,7 @@ function WishlistCard() {
     >
       <Card className={`h-full transition duration-500 ${hovered ? "bg-gray-200/60" : "bg-white"}`}>
         <CardHeader>
-          <CardTitle>{t("gift.wishlist")}</CardTitle>
+          <CardTitle>{t("giftSectionwishlist")}</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="space-y-4">
@@ -107,7 +107,7 @@ function WishlistCard() {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="pointer-events-auto">
               <Link href="/gift" prefetch={false}>
-                <Button size="lg">{t("gift.gift")}</Button>
+                <Button size="lg">{t("giftSectiongift")}</Button>
               </Link>
           </div>
         </div>
@@ -144,7 +144,7 @@ function HoneyPotCard() {
     >
       <Card className={`h-full transition duration-500 ${hovered ? "bg-gray-200/60" : "bg-white"}`}>
         <CardHeader>
-          <CardTitle>{t("gift.honeyPot")}</CardTitle>
+          <CardTitle>{t("giftSectionhoneyPot")}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -155,7 +155,7 @@ function HoneyPotCard() {
               />
             </div>
             <div className="flex items-center justify-between text-sm text-gray-600">
-              <span>{t("gift.goalProgress")}</span>
+              <span>{t("giftSectiongoalProgress")}</span>
               <span>{progress}%</span>
             </div>
           </div>
@@ -166,7 +166,7 @@ function HoneyPotCard() {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="pointer-events-auto">
             <Link href="/honeypot" prefetch={false}>
-              <Button size="lg">{t("gift.donate")}</Button>
+              <Button size="lg">{t("giftSectiondonate")}</Button>
             </Link>
           </div>
         </div>

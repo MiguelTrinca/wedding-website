@@ -45,14 +45,14 @@ const translations: Record<Language, Record<string, string>> = {
     "location.reception": "Reception: 5:00 PM",
     "location.mapTitle": "Quinta do Furao Map",
     
-    // Gift
-    "gift.title": "The perfect gitf",
-    "gift.description": "Your presence is the best present — but if you insist, here are two ideas.",
-    "gift.wishlist": "Wishlist",
-    "gift.gift": "Gift",
-    "gift.honeyPot": "Honey Pot",
-    "gift.goalProgress": "Goal progress",
-    "gift.donate": "Donate",
+    // Gift Section
+    "giftSectiontitle": "The perfect gitf",
+    "giftSectiondescription": "Your presence is the best present — but if you insist, here are two ideas.",
+    "giftSectionwishlist": "Wishlist",
+    "giftSectiongift": "Gift",
+    "giftSectionhoneyPot": "Honey Pot",
+    "giftSectiongoalProgress": "Goal progress",
+    "giftSectiondonate": "Donate",
     
     // VisitMadeira
     "visitMadeira.title": "Visit Madeira",
@@ -232,6 +232,14 @@ const translations: Record<Language, Record<string, string>> = {
     "honeyPot.modalNote": "Note: If you are not able to donate, please let us know so we can arrange a different way for you to contribute to our special day.",
     "honeyPot.close": "Close",
 
+    // Gift
+    "gift.title": "Placeholder",
+    "gift.description": "Placeholder",
+    "gift.wishlist": "Placeholder",
+    "gift.thankYouTitle": "Placeholder",
+    "gift.thankYouMessage": "Placeholder",
+    "gift.gift": "Gift"
+
   },
   pt: {
     // Header
@@ -265,13 +273,13 @@ const translations: Record<Language, Record<string, string>> = {
     "location.mapTitle": "Mapa da Quinta do Furao",
     
     // Gift
-    "gift.title": "O presente perfeito",
-    "gift.description": "A vossa presença é o melhor presente — mas se insistirem, aqui estão duas ideias.",
-    "gift.wishlist": "Lista de Desejos",
-    "gift.gift": "Presentear",
-    "gift.honeyPot": "Pote de Mel",
-    "gift.goalProgress": "Progresso do objetivo",
-    "gift.donate": "Doar",
+    "giftSectiontitle": "O presente perfeito",
+    "giftSectiondescription": "A vossa presença é o melhor presente — mas se insistirem, aqui estão duas ideias.",
+    "giftSectionwishlist": "Lista de Desejos",
+    "giftSectiongift": "Presentear",
+    "giftSectionhoneyPot": "Pote de Mel",
+    "giftSectiongoalProgress": "Progresso do objetivo",
+    "giftSectiondonate": "Doar",
     
     // VisitMadeira
     "visitMadeira.title": "Visitar a Madeira",
@@ -449,6 +457,15 @@ const translations: Record<Language, Record<string, string>> = {
     "honeyPot.reference": "Referência",
     "honeyPot.modalNote": "Nota: Se não é possível doar, por favor digam-nos para que possamos arranjar uma forma diferente para vós contribuir para o nosso dia especial.",
     "honeyPot.close": "Fechar",
+
+    // Gift
+    "gift.title": "Placeholder",
+    "gift.description": "Placeholder",
+    "gift.wishlist": "Placeholder",
+    "gift.thankYouTitle": "Placeholder",
+    "gift.thankYouMessage": "Placeholder",
+    "gift.gift": "Presentear"
+
   },
 }
 
