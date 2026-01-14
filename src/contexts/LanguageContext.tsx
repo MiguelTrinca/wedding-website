@@ -233,12 +233,12 @@ const translations: Record<Language, Record<string, string>> = {
     "honeyPot.close": "Close",
 
     // Gift
-    "gift.title": "Placeholder",
-    "gift.description": "Placeholder",
-    "gift.wishlist": "Placeholder",
-    "gift.thankYouTitle": "Placeholder",
-    "gift.thankYouMessage": "Placeholder",
-    "gift.gift": "Gift"
+    "gift.title": "Wedding Gifts",
+    "gift.description": "Your presence is the greatest gift of all. For those who wish to offer something more, we have created a small wishlist with ideas that would help us start this new chapter together.",
+    "gift.wishlist": "Gift Wishlist",
+    "gift.thankYouTitle": "Thank You From the Heart ❤️",
+    "gift.thankYouMessage": "We are truly grateful for your kindness and generosity. Every gift means a lot to us and will be remembered with love.",
+    "gift.gift": "View Wishlist",
 
   },
   pt: {
@@ -459,12 +459,12 @@ const translations: Record<Language, Record<string, string>> = {
     "honeyPot.close": "Fechar",
 
     // Gift
-    "gift.title": "Placeholder",
-    "gift.description": "Placeholder",
-    "gift.wishlist": "Placeholder",
-    "gift.thankYouTitle": "Placeholder",
-    "gift.thankYouMessage": "Placeholder",
-    "gift.gift": "Presentear"
+    "gift.title": "Presentes de Casamento",
+    "gift.description": "A vossa presença é o maior presente de todos. Para quem desejar oferecer algo mais, criámos uma pequena lista de sugestões que nos ajudará a começar esta nova etapa juntos.",
+    "gift.wishlist": "Lista de Presentes",
+    "gift.thankYouTitle": "Obrigado do Fundo do Coração ❤️",
+    "gift.thankYouMessage": "Somos imensamente gratos pelo vosso carinho e generosidade. Cada presente tem um significado especial para nós e será sempre recordado com amor.",
+    "gift.gift": "Ver Lista de Presentes",
 
   },
 }
