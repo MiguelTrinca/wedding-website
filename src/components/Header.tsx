@@ -4,6 +4,8 @@ import React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/LanguageContext"
+import { LanguageFlag } from "@/components/LanguageFlag"
+
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage()
@@ -51,19 +53,7 @@ export default function Header() {
             className="h-9 w-9 p-0"
             title={language === "en" ? "Switch to Portuguese" : "Mudar para Inglês"}
           >
-            {language === "en" ? (
-              <svg className="h-5 w-5" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#006" d="M0 0h640v480H0z"/>
-                <path fill="#fff" d="M0 0h640v160H0z"/>
-                <path fill="#006" d="M0 160h640v160H0z"/>
-                <path fill="#c00" d="M0 320h640v160H0z"/>
-              </svg>
-            ) : (
-              <svg className="h-5 w-5" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#006600" d="M0 0h256v480H0z"/>
-                <path fill="#ff0000" d="M256 0h384v480H256z"/>
-              </svg>
-            )}
+            <LanguageFlag />
           </Button>
           <Button asChild>
             <Link href="/rsvp">{t("nav.rsvp")}</Link>
