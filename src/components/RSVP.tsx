@@ -73,11 +73,26 @@ export default function RSVP() {
     setGuests(newGuests)
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+  
+    const res = await fetch("/api/rsvp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        formData,
+        guests,
+      }),
+    })
+  
+    if (!res.ok) {
+      alert("Something went wrong. Please try again.")
+      return
+    }
+  
     setIsSubmitted(true)
-    // Here you would typically send the data to your backend
-    console.log("RSVP Data:", { formData, guests })
   }
 
   if (isSubmitted) {
