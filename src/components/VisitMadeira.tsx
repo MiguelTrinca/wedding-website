@@ -24,9 +24,7 @@ export default function VisitMadeira() {
       delayMs: 0,
       images: [
         { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800", alt: "Mountains" },
-        { src: "https://images.unsplash.com/photo-1526481280698-8fcc13fd9b98?w=800", alt: "Trail" },
         { src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800", alt: "Ocean" },
-        { src: "https://images.unsplash.com/photo-1526404803657-28ae1a936be6?w=800", alt: "Forest" },
       ],
     },
     {
