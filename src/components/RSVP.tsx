@@ -165,32 +165,7 @@ export default function RSVP() {
                       required
                       />
                     
-                    {/*<InputGroupAddon align="inline-end">
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <InputGroupButton
-                            variant="ghost"
-                            aria-label="Help"
-                            size="icon-xs"
-                          >
-                            <HelpCircle />
-                          </InputGroupButton>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>We&apos;ll use this to send you notifications</p>
-                        </TooltipContent>
-                      </Tooltip>
-                  </InputGroupAddon>
-                    */}
                   </InputGroup>
-                  {/*<Input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    required
-                  />*/}
                 </div>
                 <div>
                 <Label 
@@ -208,15 +183,6 @@ export default function RSVP() {
                       required
                       />
                   </InputGroup>
-                  {/*<input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                  />*/}
                 </div>
               </div>
 
@@ -277,7 +243,7 @@ export default function RSVP() {
                     onValueChange={(value) => setFormData(prev => ({ ...prev, needsTransportation: value }))}
                   >
                     <SelectTrigger id="transportation" className="w-full">
-                      <SelectValue placeholder={t("rsvp.selectNumber")} />
+                      <SelectValue placeholder={t("rsvp.selectTransportation")} />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="yes">{t("rsvp.transportationYes")}</SelectItem>
@@ -371,12 +337,25 @@ export default function RSVP() {
                             <label className="block text-sm font-medium text-gray-700 mb-2">
                               {t("rsvp.guestFirstName")}
                             </label>
-                            <input
+                            {/*<input
                               type="text"
                               value={guest.firstName}
                               onChange={(e) => handleGuestChange(index, "firstName", e.target.value)}
                               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />*/}
+                            <input
+                              type="text"
+                              value={guest.firstName}
+                              onChange={(e) => handleGuestChange(index, "firstName", e.target.value)}
+                              className="
+                                w-full px-3 py-2
+                                bg-white text-gray-900
+                                placeholder:text-gray-400
+                                border border-gray-300 rounded-md
+                                focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600
+                              "
                             />
+
                           </div>
                           <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -386,7 +365,13 @@ export default function RSVP() {
                               type="text"
                               value={guest.lastName}
                               onChange={(e) => handleGuestChange(index, "lastName", e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                              className="
+                                w-full px-3 py-2
+                                bg-white text-gray-900
+                                placeholder:text-gray-400
+                                border border-gray-300 rounded-md
+                                focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600
+                              "
                             />
                           </div>
                         </div>
