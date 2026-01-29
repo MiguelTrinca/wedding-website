@@ -260,13 +260,15 @@ export default function RSVP() {
                     {t("rsvp.guestCount")}
                   </Label>
                   <Select
-                    value={formData.guestCount > 0 ? formData.guestCount.toString() : ""}
+                    //value={formData.guestCount > 0 ? formData.guestCount.toString() : ""}
+                    value={formData.guestCount.toString()}
                     onValueChange={handleGuestCountChange}
                   >
                     <SelectTrigger id="guestCount" className="w-full">
                       <SelectValue placeholder={t("rsvp.selectNumber")} />
                     </SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="0">{t("rsvp.justMe")}</SelectItem>
                       <SelectItem value="1">1</SelectItem>
                       <SelectItem value="2">2</SelectItem>
                       <SelectItem value="3">3</SelectItem>
