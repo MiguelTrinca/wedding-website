@@ -13,10 +13,10 @@ import {
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Input } from "@/components/ui/input"
-import { HelpCircle } from "lucide-react"
-import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from "./ui/input-group"
-import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip"
+import { InputGroup, InputGroupInput } from "./ui/input-group"
 import { useLanguage } from "@/contexts/LanguageContext"
+import { motion, AnimatePresence } from "framer-motion"
+
 
 interface Guest {
   firstName: string
@@ -330,7 +330,16 @@ export default function RSVP() {
                   <h3 className="text-lg font-medium text-gray-700">
                     {t("rsvp.additionalGuests")}
                   </h3>
-                  {guests.map((guest, index) => (
+                  <AnimatePresence>
+                  {
+                    guests.map((guest, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.25 }}
+                    >
                     <Card key={index} className="bg-gray-50">
                       <CardContent className="pt-4">
                         <h4 className="text-sm font-medium text-gray-600 mb-3">
@@ -422,7 +431,9 @@ export default function RSVP() {
                         </div>
                       </CardContent>
                     </Card>
+                    </motion.div>
                   ))}
+                  </AnimatePresence>
                 </div>
               )}
 
