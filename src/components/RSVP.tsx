@@ -169,7 +169,7 @@ export default function RSVP() {
                 </div>
                 <div>
                 <Label 
-                    htmlFor="firstName" //className="block text-sm font-medium text-gray-700 mb-2"
+                    htmlFor="lastName" //className="block text-sm font-medium text-gray-700 mb-2"
                   >
                     {t("rsvp.lastName")} *
                   </Label>
@@ -259,8 +259,10 @@ export default function RSVP() {
                   <Label htmlFor="guestCount" className="block text-sm font-medium text-gray-700 mb-2">
                     {t("rsvp.guestCount")}
                   </Label>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {t("rsvp.guestCountHelp")}
+                  </p>
                   <Select
-                    //value={formData.guestCount > 0 ? formData.guestCount.toString() : ""}
                     value={formData.guestCount.toString()}
                     onValueChange={handleGuestCountChange}
                   >
@@ -345,50 +347,40 @@ export default function RSVP() {
                               onChange={(e) => handleGuestChange(index, "firstName", e.target.value)}
                               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                             />*/}
-                            <input
+                            <Input
                               type="text"
                               value={guest.firstName}
                               onChange={(e) => handleGuestChange(index, "firstName", e.target.value)}
-                              className="
-                                w-full px-3 py-2
-                                bg-white text-gray-900
-                                placeholder:text-gray-400
-                                border border-gray-300 rounded-md
-                                focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600
-                              "
+                              placeholder={t("rsvp.guestFirstName")}
+                              className="bg-white text-gray-900"
                             />
-
                           </div>
                           <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">
                               {t("rsvp.guestLastName")}
                             </label>
-                            <input
+                            <Input
                               type="text"
                               value={guest.lastName}
                               onChange={(e) => handleGuestChange(index, "lastName", e.target.value)}
-                              className="
-                                w-full px-3 py-2
-                                bg-white text-gray-900
-                                placeholder:text-gray-400
-                                border border-gray-300 rounded-md
-                                focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600
-                              "
+                              placeholder={t("rsvp.guestLastName")}
+                              className="bg-white text-gray-900"
                             />
+
                           </div>
                         </div>
                         <div className="mt-4">
-                          <label className="flex items-center">
-                            <input
-                              type="checkbox"
-                              checked={guest.isKid}
-                              onChange={(e) => handleGuestChange(index, "isKid", e.target.checked)}
-                              className="mr-2"
-                            />
-                            <span className="text-sm text-gray-700">
-                              {t("rsvp.guestIsKid")}
-                            </span>
-                          </label>
+                        <label className="flex items-center gap-2 mt-4">
+                          <input
+                            type="checkbox"
+                            checked={guest.isKid}
+                            onChange={(e) => handleGuestChange(index, "isKid", e.target.checked)}
+                            className="accent-green-600"
+                          />
+                          <span className="text-sm text-gray-700">
+                            {t("rsvp.guestIsKid")}
+                          </span>
+                        </label>
                         </div>
                         <div className="mt-4 space-y-4">
                           <div>
