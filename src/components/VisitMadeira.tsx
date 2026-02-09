@@ -100,7 +100,7 @@ function AutoScrollCard({ spec }: { spec: CardSpec }) {
           </div>
 
           {/* Hover overlay */}
-          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+          <div className="absolute rounded-lg inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center p-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
             <div className="text-center space-y-4">
               <p className="text-white text-sm md:text-base max-w-xs mx-auto">{spec.description}</p>
               <Link href={spec.href} prefetch={false}>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -217,18 +217,35 @@ function ActivitiesPageContent() {
 
 function ActivityCard({ activity }: { activity: Activity }) {
   const { t } = useLanguage()
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <Card className="group relative overflow-hidden h-full flex flex-col">
+    <Card
+      className="group relative overflow-hidden h-full flex flex-col cursor-pointer"
+      onClick={() => setIsOpen((prev) => !prev)}
+    >
       <div className="relative h-56 overflow-hidden">
         <img
           src={activity.image}
           alt={activity.alt}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-          <div className="text-center space-y-4">
+
+        {/* Overlay */}
+        <div
+          className={`
+            absolute inset-0
+            bg-black/40 backdrop-blur-[2px]
+            flex items-center justify-center p-4
+            transition-opacity duration-300 md:opacity-0
+            md:group-hover:opacity-100
+            ${isOpen ? "opacity-100" : "opacity-0"}
+          `}
+        >
+          <div
+            className="text-center space-y-4"
+            onClick={(e) => e.stopPropagation()} // prevents closing when clicking button
+          >
             <p className="text-white text-sm md:text-base max-w-xs mx-auto">
               {activity.description}
             </p>
@@ -238,6 +255,7 @@ function ActivityCard({ activity }: { activity: Activity }) {
           </div>
         </div>
       </div>
+
       <CardHeader>
         <CardTitle>{activity.title}</CardTitle>
       </CardHeader>
@@ -245,11 +263,16 @@ function ActivityCard({ activity }: { activity: Activity }) {
   )
 }
 
+
 function RestaurantCard({ restaurant }: { restaurant: Restaurant }) {
   const { t } = useLanguage()
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <Card className="group relative overflow-hidden h-full flex flex-col">
+    <Card 
+    className="group relative overflow-hidden h-full flex flex-col cursor-pointer"
+    onClick={() => setIsOpen((prev) => !prev)}
+    >
       <div className="relative h-56 overflow-hidden">
         <img
           src={restaurant.image}
@@ -257,8 +280,20 @@ function RestaurantCard({ restaurant }: { restaurant: Restaurant }) {
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
         {/* Hover overlay */}
-        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-          <div className="text-center space-y-4">
+        <div
+          className={`
+            absolute inset-0
+            bg-black/40 backdrop-blur-[2px]
+            flex items-center justify-center p-4
+            transition-opacity duration-300 md:opacity-0
+            md:group-hover:opacity-100
+            ${isOpen ? "opacity-100" : "opacity-0"}
+          `}
+        >
+          <div
+            className="text-center space-y-4"
+            onClick={(e) => e.stopPropagation()} // prevents closing when clicking button
+          >
             <p className="text-white text-sm md:text-base max-w-xs mx-auto">
               {restaurant.description}
             </p>
