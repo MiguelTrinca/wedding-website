@@ -2,9 +2,11 @@
 
 import React from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button} from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/components/ui/sheet"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { LanguageFlag } from "@/components/LanguageFlag"
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 
 export default function Header() {
@@ -69,37 +71,71 @@ export default function Header() {
             className="h-9 w-9 p-0"
             title={language === "en" ? "Switch to Portuguese" : "Mudar para Inglês"}
           >
-            {language === "en" ? (
-              <svg className="h-5 w-5" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#006" d="M0 0h640v480H0z"/>
-                <path fill="#fff" d="M0 0h640v160H0z"/>
-                <path fill="#006" d="M0 160h640v160H0z"/>
-                <path fill="#c00" d="M0 320h640v160H0z"/>
-              </svg>
-            ) : (
-              <svg className="h-5 w-5" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#006600" d="M0 0h256v480H0z"/>
-                <path fill="#ff0000" d="M256 0h384v480H256z"/>
-              </svg>
-            )}
+            <LanguageFlag />
           </Button>
-          <Button variant="ghost" size="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="3" x2="21" y1="6" y2="6" />
-              <line x1="3" x2="21" y1="12" y2="12" />
-              <line x1="3" x2="21" y1="18" y2="18" />
-            </svg>
-          </Button>
+          <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" aria-label="Open menu">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+            </Button>
+          </SheetTrigger>
+
+          <SheetContent side="right" className="w-72">
+            <SheetHeader>
+              <VisuallyHidden>
+                <SheetTitle>Navigation menu</SheetTitle>
+              </VisuallyHidden>
+            </SheetHeader>
+
+            <nav className="flex flex-col gap-6 mt-10">
+              <Link href="/" className="text-lg font-medium">
+                {t("nav.home")}
+              </Link>
+
+              <Link href="/activities" className="text-lg font-medium">
+                {t("nav.activities")}
+              </Link>
+
+              <Link href="/dress-code" className="text-lg font-medium">
+                {t("nav.dressCode")}
+              </Link>
+
+              <Link href="/activities#transportation" className="text-lg font-medium">
+                {t("nav.transportation")}
+              </Link>
+
+              <Link href="/rsvp" className="text-lg font-medium">
+                {t("nav.rsvp")}
+              </Link>
+
+              <div className="pt-4 border-t">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={toggleLanguage}
+                  className="h-10 w-10"
+                >
+                  <LanguageFlag />
+                </Button>
+              </div>
+            </nav>
+          </SheetContent>
+        </Sheet>
+
         </div>
       </div>
     </header>
