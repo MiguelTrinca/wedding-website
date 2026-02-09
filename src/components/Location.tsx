@@ -4,8 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { MapPin, Clock, Phone, Mail } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
+import React from "react"
 
 export default function Location() {
+  const [current, setCurrent] = React.useState(0)
   const { t } = useLanguage()
   // Placeholder images for the carousel
   const locationImages = [
@@ -93,24 +95,46 @@ export default function Location() {
 
           {/* Image Carousel */}
           <div className="relative">
-            <Carousel className="w-full max-w-lg mx-auto">
-              <CarouselContent>
+            <Carousel
+              className="w-full max-w-lg mx-auto overflow-visible"
+              opts={{ loop: true }}
+              setApi={(api) => {
+                if (!api) return
+                setCurrent(api.selectedScrollSnap())
+                api.on("select", () => setCurrent(api.selectedScrollSnap()))
+              }}
+            >
+              <CarouselContent className="-ml-4">
                 {locationImages.map((image, index) => (
                   <CarouselItem key={index}>
-                    <div className="relative">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-96 object-cover rounded-lg"
-                      />
-                      <div className="absolute inset-0 bg-black/20 rounded-lg" />
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="pl-4 basis-[90%] md:basis-full"
+                    />
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/90 text-xs bg-black/40 px-3 py-1 rounded-full md:hidden">
+                      Swipe →
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
+
               <CarouselPrevious />
               <CarouselNext />
             </Carousel>
+            
+            {/* Pagination dots */}
+            <div className="mt-4 flex justify-center gap-2">
+              {locationImages.map((_, index) => (
+                <span
+                  key={index}
+                  className={`h-2 w-2 rounded-full transition-colors ${
+                    index === current ? "bg-primary" : "bg-muted"
+                  }`}
+                />
+              ))}
+            </div>
+
           </div>
         </div>
       </div>
