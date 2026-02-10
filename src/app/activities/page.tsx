@@ -231,6 +231,12 @@ function ActivityCard({ activity }: { activity: Activity }) {
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
 
+        
+        {/* Mobile tap hint */}
+        <span className="absolute bottom-2 right-2 md:hidden text-xs text-white/80 bg-black/50 px-2 py-1 rounded-full">
+          Tap to explore
+        </span>
+
         {/* Overlay */}
         <div
           className={`
@@ -279,6 +285,12 @@ function RestaurantCard({ restaurant }: { restaurant: Restaurant }) {
           alt={restaurant.alt}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
+
+        {/* Mobile tap hint */}
+        <span className="absolute bottom-2 right-2 md:hidden text-xs text-white/80 bg-black/50 px-2 py-1 rounded-full">
+          Tap to explore
+        </span>
+        
         {/* Hover overlay */}
         <div
           className={`
