@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useState } from "react"
 import Link from "next/link"
 import { Button} from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/components/ui/sheet"
@@ -11,6 +11,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage()
+  const [isOpen, setOpen] = useState(false)
 
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "pt" : "en")
@@ -73,7 +74,7 @@ export default function Header() {
           >
             <LanguageFlag />
           </Button>
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" aria-label="Open menu">
               <svg
@@ -102,23 +103,23 @@ export default function Header() {
             </SheetHeader>
 
             <nav className="flex flex-col gap-6 mt-10">
-              <Link href="/" className="text-lg font-medium">
+              <Link href="/" className="text-lg font-medium" onClick={() => setOpen(false)}>
                 {t("nav.home")}
               </Link>
 
-              <Link href="/activities" className="text-lg font-medium">
+              <Link href="/activities" className="text-lg font-medium" onClick={() => setOpen(false)}>
                 {t("nav.activities")}
               </Link>
 
-              <Link href="/dress-code" className="text-lg font-medium">
+              <Link href="/dress-code" className="text-lg font-medium" onClick={() => setOpen(false)}>
                 {t("nav.dressCode")}
               </Link>
 
-              <Link href="/activities#transportation" className="text-lg font-medium">
+              <Link href="/activities#transportation" className="text-lg font-medium" onClick={() => setOpen(false)}>
                 {t("nav.transportation")}
               </Link>
 
-              <Link href="/rsvp" className="text-lg font-medium">
+              <Link href="/rsvp" className="text-lg font-medium" onClick={() => setOpen(false)}>
                 {t("nav.rsvp")}
               </Link>
 
