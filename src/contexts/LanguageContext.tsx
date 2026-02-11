@@ -21,6 +21,8 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.dressCode": "Dress Code",
     "nav.transportation": "Transportation",
     "nav.rsvp": "RSVP",
+    "nav.gift": "Gift",
+    "nav.honeyPot": "Honey Pot",
     
     // Hero
     "hero.date": "June 20th, 2026",
@@ -251,6 +253,8 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.dressCode": "Código de Vestuário",
     "nav.transportation": "Transporte",
     "nav.rsvp": "RSVP",
+    "nav.gift": "Presente",
+    "nav.honeyPot": "Honey Pot",
     
     // Hero
     "hero.date": "20 de Junho de 2026",

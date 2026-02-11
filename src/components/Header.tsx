@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { Button} from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/components/ui/sheet"
@@ -49,6 +49,21 @@ export default function Header() {
           >
             {t("nav.transportation")}
           </Link>
+
+          <Link 
+            href="/gift" 
+            className="text-sm font-medium transition-colors hover:text-primary" 
+          >
+            {t("nav.gift")}
+          </Link>
+
+          <Link 
+            href="/honeypot" 
+            className="text-sm font-medium transition-colors hover:text-primary"
+          >
+            {t("nav.honeyPot")}
+          </Link>
+
           <Button 
             variant="ghost" 
             size="icon" 
@@ -119,11 +134,20 @@ export default function Header() {
                 {t("nav.transportation")}
               </Link>
 
-              <Link href="/rsvp" className="text-lg font-medium" onClick={() => setOpen(false)}>
-                {t("nav.rsvp")}
+              <Link href="/gift" className="text-lg font-medium" onClick={() => setOpen(false)}>
+                {t("nav.gift")}
+              </Link>
+
+              <Link href="/honeypot" className="text-lg font-medium" onClick={() => setOpen(false)}>
+                {t("nav.honeyPot")}
               </Link>
 
               <div className="pt-4 border-t">
+
+                <Button asChild>
+                  <Link href="/rsvp">{t("nav.rsvp")}</Link>
+                </Button>
+
                 <Button
                   variant="ghost"
                   size="icon"
