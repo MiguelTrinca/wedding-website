@@ -1,75 +1,83 @@
 @import "tailwindcss";
 
 :root {
+  /* Core wedding palette */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #12100E;
+
   --card: #ffffff;
-  --card-foreground: #171717;
+  --card-foreground: #12100E;
+
   --popover: #ffffff;
-  --popover-foreground: #171717;
-  --primary: #0F5132;
+  --popover-foreground: #12100E;
+
+  /* Primary = Dark Khaki */
+  --primary: #4A4B2F;
   --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #f1f5f9;
-  --accent-foreground: #0f172a;
-  --destructive: #ef4444;
+
+  /* Secondary = Dusty Taupe */
+  --secondary: #A78476;
+  --secondary-foreground: #ffffff;
+
+  /* Muted = Soft Olive (used subtly) */
+  --muted: #B2BD7E;
+  --muted-foreground: #12100E;
+
+  /* Accent = Same as secondary for now */
+  --accent: #A78476;
+  --accent-foreground: #ffffff;
+
+  /* Destructive (keep neutral red for forms) */
+  --destructive: #B91C1C;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #0F5132;
-  --radius: 0.5rem;
+
+  /* Borders & inputs — subtle, derived from foreground */
+  --border: rgba(18, 16, 14, 0.12);
+  --input: rgba(18, 16, 14, 0.12);
+
+  /* Focus ring = primary */
+  --ring: #4A4B2F;
+
+  --radius: 0.75rem;
 }
 
+/* Tailwind inline theme mapping */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "SF Mono", Monaco, Inconsolata, "Roboto Mono", "Source Code Pro", monospace;
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --font-mono: "SF Mono", Monaco, Inconsolata, "Roboto Mono",
+    "Source Code Pro", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --card: #0a0a0a;
-    --card-foreground: #ededed;
-    --popover: #0a0a0a;
-    --popover-foreground: #ededed;
-    --primary: #0F5132;
-    --primary-foreground: #ffffff;
-    --secondary: #1a1a1a;
-    --secondary-foreground: #ededed;
-    --muted: #1a1a1a;
-    --muted-foreground: #a1a1aa;
-    --accent: #1a1a1a;
-    --accent-foreground: #ededed;
-    --destructive: #ef4444;
-    --destructive-foreground: #ffffff;
-    --border: #27272a;
-    --input: #27272a;
-    --ring: #0F5132;
-  }
-}
 
 * {
   border-color: var(--border);
