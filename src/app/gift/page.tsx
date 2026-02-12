@@ -60,10 +60,10 @@ function GiftPageContent() {
         {/* Intro Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
               {t("gift.title")}
             </h1>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-foreground/80 max-w-2xl mx-auto">
               {t("gift.description")}
             </p>
           </div>
@@ -73,7 +73,7 @@ function GiftPageContent() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
                 {t("gift.wishlist")}
               </h2>
 
@@ -115,10 +115,10 @@ function GiftPageContent() {
         {/* Closing CTA Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t("gift.thankYouTitle")}
             </h2>
-            <p className="text-gray-600 max-w-xl mx-auto mb-8">
+            <p className="text-foreground/80 max-w-xl mx-auto mb-8">
               {t("gift.thankYouMessage")}
             </p>
 
