@@ -22,19 +22,19 @@ function HoneyPotPageContent() {
 
       <main>
         {/* Intro Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
               {t("honeyPot.title")}
             </h1>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-foreground/80 max-w-2xl mx-auto">
               {t("honeyPot.description")}
             </p>
           </div>
         </section>
 
         {/* Progress Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-muted/20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -50,11 +50,11 @@ function HoneyPotPageContent() {
                   </div>
 
                   <CardHeader>
-                    <CardTitle>{t("honeyPot.goalProgress")}</CardTitle>
+                    <CardTitle className="text-foreground">{t("honeyPot.goalProgress")}</CardTitle>
                   </CardHeader>
 
                   <CardContent>
-                    <p className="text-gray-600">
+                    <p className="text-foreground/80">
                       {t("honeyPot.progressMessage")}
                     </p>
                   </CardContent>
@@ -64,7 +64,7 @@ function HoneyPotPageContent() {
                 <div className="flex flex-col items-center gap-6">
                   
                   {/* Progress Percentage */}
-                  <h3 className="text-3xl font-bold text-gray-900">
+                  <h3 className="text-3xl font-bold text-foreground">
                     {Math.round(progress)}%
                   </h3>
 
@@ -80,7 +80,7 @@ function HoneyPotPageContent() {
                         />
                       </div>
 
-                      {/* Milestone Lines */}
+                      {/* Milestone Lines 
                       {[25, 50, 75].map((value) => (
                         <div
                           key={value}
@@ -88,16 +88,18 @@ function HoneyPotPageContent() {
                           style={{ bottom: `${value}%` }}
                         />
                       ))}
+                        */}
                     </div>
 
-                    {/* Percentage Labels */}
+                    {/* Percentage Labels 
                     <div className="flex flex-col justify-between h-96 text-sm text-gray-600">
                       <span>100%</span>
                       <span>75%</span>
                       <span>50%</span>
                       <span>25%</span>
                       <span>0%</span>
-                    </div>
+                    </div>'
+                    */}
                   </div>
                 </div>
 
@@ -110,10 +112,10 @@ function HoneyPotPageContent() {
         {/* Donate Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t("honeyPot.thankYouTitle")}
             </h2>
-            <p className="text-gray-600 max-w-xl mx-auto mb-8">
+            <p className="text-foreground/80 max-w-xl mx-auto mb-8">
               {t("honeyPot.thankYouMessage")}
             </p>
 
@@ -128,21 +130,22 @@ function HoneyPotPageContent() {
 
       {/* Donate Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/30 px-4">
           <div className="bg-white rounded-lg shadow-xl max-w-md w-full relative">
-            <button
+            <Button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+              className="absolute top-3 right-3"
+              variant={"ghost"}
             >
               ✕
-            </button>
+            </Button>
 
             <div className="p-6 space-y-4">
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-foreground">
                 {t("honeyPot.modalTitle")}
               </h3>
 
-              <div className="text-sm text-gray-700 space-y-2">
+              <div className="text-sm text-foreground/80 space-y-2">
                 <p>
                     <strong>{t("honeyPot.phoneNumber")}:</strong> +351 123 456 789
                 </p>
@@ -157,7 +160,7 @@ function HoneyPotPageContent() {
                 </p>
               </div>
 
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-foreground/60">
                 {t("honeyPot.modalNote")}
               </p>
 
