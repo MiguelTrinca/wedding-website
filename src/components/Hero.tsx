@@ -3,17 +3,28 @@
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
+import Image from "next/image"
 
 export default function Hero() {
   const { t } = useLanguage()
   
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image Placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-emerald-100">
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-      </div>
+     {/* Background Image */}
+     <div className="absolute inset-0">
+      <Image
+        src="/foto-brazil.jpg"
+        alt="Beatriz and Miguel in Brazil"
+        fill
+        priority
+        className="object-cover"
+      />
+
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+    </div>
+
+
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
@@ -37,7 +48,6 @@ export default function Hero() {
           </p>
           <Button 
             size="lg" 
-            className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 text-lg font-semibold"
             asChild
           >
             <a href="/rsvp">{t("hero.rsvp")}</a>
