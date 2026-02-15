@@ -33,10 +33,10 @@ export default function Location() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             {t("location.title")}
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
             {t("location.description")}
           </p>
         </div>
@@ -44,43 +44,43 @@ export default function Location() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Venue Information */}
           <div className="space-y-8">
-            <Card>
+            <Card className="bg-secondary/20">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-2xl">
-                  <MapPin className="h-6 w-6 text-green-500" />
+                <CardTitle className="flex items-center gap-2 text-foreground text-2xl">
+                  <MapPin className="h-6 w-6 text-secondary" />
                   Quinta do Furao
                 </CardTitle>
                 <CardDescription className="text-lg">
                   {t("location.cardDescription")}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 text-foreground/80">
                 <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-green-500" />
+                  <Clock className="h-5 w-5 text-secondary" />
                   <span>{t("location.reception")}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-green-500" />
+                  <MapPin className="h-5 w-5 text-secondary" />
                   <span>Estrada da Quinta do Furão Nº6, 9230-082 Santana, Portugal</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-green-500" />
+                  <Phone className="h-5 w-5 text-secondary" />
                   <span>+351 123 456 789</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-green-500" />
+                  <Mail className="h-5 w-5 text-secondary" />
                   <span>info@quintadofurao.pt</span>
                 </div>
               </CardContent>
             </Card>
 
             {/* Map Placeholder */}
-            <Card>
+            <Card className="bg-secondary/20 text-foreground" >
               <CardHeader>
                 <CardTitle>{t("location.mapTitle")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+                <div className="w-full h-64 bg-secondary/20 rounded-lg flex items-center justify-center">
                     <iframe
                       title="Quinta do Furao Map"
                       src="https://www.google.com/maps?q=quinta+do+fur%C3%A3o+madeira&output=embed"
@@ -96,7 +96,7 @@ export default function Location() {
           {/* Image Carousel */}
           <div className="relative">
             <Carousel
-              className="w-full max-w-lg mx-auto overflow-visible"
+              className="w-full max-w-lg mx-auto rounded-xl border bg-secondary/20 shadow-lg p-4"
               opts={{ loop: true }}
               setApi={(api) => {
                 if (!api) return
@@ -106,14 +106,13 @@ export default function Location() {
             >
               <CarouselContent className="-ml-4">
                 {locationImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="pl-4 basis-[90%] md:basis-full"
-                    />
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/90 text-xs bg-black/40 px-3 py-1 rounded-full md:hidden">
-                      Swipe →
+                  <CarouselItem key={index} className="pl-4 basis-[90%] md:basis-full">
+                    <div className="relative overflow-hidden rounded-xl shadow-md">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-auto object-cover"
+                      />
                     </div>
                   </CarouselItem>
                 ))}
