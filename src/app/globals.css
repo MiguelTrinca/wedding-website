@@ -12,15 +12,15 @@
   --popover-foreground: #12100E;
 
   /* Primary = Dark Khaki */
-  --primary: #4A4B2F;
+  --primary: #182B32;
   --primary-foreground: #ffffff;
 
   /* Secondary = Dusty Taupe */
-  --secondary: #A78476;
+  --secondary: #937342;
   --secondary-foreground: #ffffff;
 
   /* Muted = Soft Olive (used subtly) */
-  --muted: #B2BD7E;
+  --muted: #ABC4AB;
   --muted-foreground: #12100E;
 
   /* Accent = Same as secondary for now */
