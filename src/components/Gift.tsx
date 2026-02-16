@@ -29,13 +29,13 @@ export default function Gift() {
   const { t } = useLanguage()
   
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
             {t("giftSectiontitle")}
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-foreground/80 max-w-2xl mx-auto">
             {t("giftSectiondescription")}
           </p>
         </div>
@@ -80,7 +80,7 @@ function WishlistCard() {
     >
       <Card className={`h-full transition duration-500 ${hovered ? "bg-gray-200/60" : "bg-white"}`}>
         <CardHeader>
-          <CardTitle>{t("giftSectionwishlist")}</CardTitle>
+          <CardTitle className="text-foreground">{t("giftSectionwishlist")}</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="space-y-4">
@@ -90,12 +90,12 @@ function WishlistCard() {
                 <li key={item} className="flex items-center gap-3">
                   <span
                     className={`h-5 w-5 rounded border flex items-center justify-center transition-all ${
-                      isChecked ? "bg-green-500 border-green-500" : "bg-white border-gray-300"
+                      isChecked ? "bg-primary border-primary" : "bg-white border-gray-300"
                     }`}
                   >
                     {isChecked ? <Check className="h-4 w-4 text-white" /> : null}
                   </span>
-                  <span className={`${isChecked ? "text-gray-500 line-through" : ""}`}>{item}</span>
+                  <span className={`${isChecked ? "text-foreground/60 line-through" : ""}`}>{item}</span>
                 </li>
               )
             })}
@@ -107,7 +107,7 @@ function WishlistCard() {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="pointer-events-auto">
               <Link href="/gift" prefetch={false}>
-                <Button size="lg">{t("giftSectiongift")}</Button>
+                <Button size="lg" variant="secondary">{t("giftSectiongift")}</Button>
               </Link>
           </div>
         </div>
@@ -144,17 +144,17 @@ function HoneyPotCard() {
     >
       <Card className={`h-full transition duration-500 ${hovered ? "bg-gray-200/60" : "bg-white"}`}>
         <CardHeader>
-          <CardTitle>{t("giftSectionhoneyPot")}</CardTitle>
+          <CardTitle className="text-foreground">{t("giftSectionhoneyPot")}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             <div className="h-4 w-full bg-gray-200 rounded-full overflow-hidden">
               <div
-                className="h-full bg-amber-500 transition-all"
+                className="h-full bg-primary transition-all"
                 style={{ width: `${progress}%` }}
               />
             </div>
-            <div className="flex items-center justify-between text-sm text-gray-600">
+            <div className="flex items-center justify-between text-sm text-foreground/60">
               <span>{t("giftSectiongoalProgress")}</span>
               <span>{progress}%</span>
             </div>
@@ -166,7 +166,7 @@ function HoneyPotCard() {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="pointer-events-auto">
             <Link href="/honeypot" prefetch={false}>
-              <Button size="lg">{t("giftSectiondonate")}</Button>
+              <Button size="lg" variant="secondary">{t("giftSectiondonate")}</Button>
             </Link>
           </div>
         </div>
