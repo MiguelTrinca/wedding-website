@@ -99,9 +99,9 @@ const translations: Record<Language, Record<string, string>> = {
     "restaurants.beerGarden": "Beer Garden",
     "restaurants.beerGardenDesc": "Must try the chocolate mousse and eat a \"Picado\"",
     "restaurants.beerGardenLocation": "Funchal, Madeira",
-    "restaurants.santoAntonio": "Santo Antonio",
+    "restaurants.santoAntonio": "Santo António",
     "restaurants.santoAntonioDesc": "The best \"Espetada\" that you can eat",
-    "restaurants.santoAntonioLocation": "Madeira",
+    "restaurants.santoAntonioLocation": "Câmara de Lobos, Estreito de Câmara de lobos",
     
     // Transportation
     "transportation.title": "Transportation",
@@ -331,9 +331,9 @@ const translations: Record<Language, Record<string, string>> = {
     "restaurants.beerGarden": "Beer Garden",
     "restaurants.beerGardenDesc": "Deve experimentar o mousse de chocolate e comer um \"Picado\"",
     "restaurants.beerGardenLocation": "Funchal, Madeira",
-    "restaurants.santoAntonio": "Santo Antonio",
+    "restaurants.santoAntonio": "Santo António",
     "restaurants.santoAntonioDesc": "A melhor \"Espetada\" que pode comer",
-    "restaurants.santoAntonioLocation": "Madeira",
+    "restaurants.santoAntonioLocation": "Câmara de Lobos, Estreito de Câmara de lobos",
     
     // Transportation
     "transportation.title": "Transporte",

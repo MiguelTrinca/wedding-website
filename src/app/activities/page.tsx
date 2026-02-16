@@ -23,6 +23,7 @@ type Restaurant = {
   location: string
   image: string
   alt: string
+  website: string
 }
 
 function ActivitiesPageContent() {
@@ -84,22 +85,25 @@ function ActivitiesPageContent() {
       name: t("restaurants.kampo"),
       description: t("restaurants.kampoDesc"),
       location: t("restaurants.kampoLocation"),
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+      image: "https://kampo.pt/wp-content/uploads/2024/07/aaaaa.png",
       alt: "Kampo restaurant",
+      website: "https://kampo.pt/kampo/"
     },
     {
       name: t("restaurants.beerGarden"),
       description: t("restaurants.beerGardenDesc"),
       location: t("restaurants.beerGardenLocation"),
-      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800",
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/9a/34/3a/the-beer-garden.jpg?w=1800&h=1000&s=1",
       alt: "Beer Garden restaurant",
+      website: "https://www.tripadvisor.com.br/Restaurant_Review-g189167-d2535812-Reviews-The_Beer_Garden-Funchal_Madeira_Madeira_Islands.html"
     },
     {
       name: t("restaurants.santoAntonio"),
       description: t("restaurants.santoAntonioDesc"),
       location: t("restaurants.santoAntonioLocation"),
-      image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800",
+      image: "https://www.restaurantesantoantonio.com/img/04Menu05.jpg",
       alt: "Santo Antonio restaurant",
+      website: "https://www.restaurantesantoantonio.com/"
     },
   ]
 
@@ -124,13 +128,13 @@ function ActivitiesPageContent() {
       <Header />
       <main>
         {/* Activities Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
                 {t("activities.title")}
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-foreground/80 max-w-2xl mx-auto">
                 {t("activities.description")}
               </p>
             </div>
@@ -144,7 +148,7 @@ function ActivitiesPageContent() {
         </section>
 
         {/* Restaurants Section */}
-        <section id="restaurants" className="py-20 bg-white scroll-mt-20">
+        <section id="restaurants" className="py-20 bg-gray-50 scroll-mt-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
@@ -164,45 +168,45 @@ function ActivitiesPageContent() {
         </section>
 
         {/* Transportation Section */}
-        <section id="transportation" className="py-20 bg-gray-50 scroll-mt-20">
+        <section id="transportation" className="py-20 bg-background scroll-mt-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
                 {t("transportation.title")}
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-foreground/80 max-w-2xl mx-auto">
                 {t("transportation.description")}
               </p>
             </div>
 
             <div className="max-w-4xl mx-auto space-y-8">
-              <Card>
+              <Card className="bg-secondary/20">
                 <CardHeader>
-                  <CardTitle>{t("transportation.weddingTransport")}</CardTitle>
+                  <CardTitle className="text-foreground">{t("transportation.weddingTransport")}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-foreground/80">
                     {t("transportation.weddingTransportDesc")}
                   </p>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-secondary/20">
                 <CardHeader>
-                  <CardTitle>{t("transportation.carRental")}</CardTitle>
+                  <CardTitle className="text-foreground">{t("transportation.carRental")}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-foreground/80 mb-4">
                     {t("transportation.carRentalDesc")}
                   </p>
                   <Link
                     href="https://www.facebook.com/p/Ba%C3%ADa-Car-Stand-de-Autom%C3%B3veis-61550926242150/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mt-4"
+                    className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors mt-4"
                   >
                     <Facebook className="h-5 w-5" />
-                    <span className="text-sm font-medium">Baia Car - Facebook</span>
+                    <span className="text-sm font-medium text-secondary">Baia Car - Facebook</span>
                   </Link>
                 </CardContent>
               </Card>
@@ -221,7 +225,7 @@ function ActivityCard({ activity }: { activity: Activity }) {
 
   return (
     <Card
-      className="group relative overflow-hidden h-full flex flex-col cursor-pointer"
+      className="group relative overflow-hidden h-full flex flex-col cursor-pointer bg-secondary/20"
       onClick={() => setIsOpen((prev) => !prev)}
     >
       <div className="relative h-56 overflow-hidden">
@@ -263,7 +267,7 @@ function ActivityCard({ activity }: { activity: Activity }) {
       </div>
 
       <CardHeader>
-        <CardTitle>{activity.title}</CardTitle>
+        <CardTitle className="text-foreground">{activity.title}</CardTitle>
       </CardHeader>
     </Card>
   )
@@ -276,7 +280,7 @@ function RestaurantCard({ restaurant }: { restaurant: Restaurant }) {
 
   return (
     <Card 
-    className="group relative overflow-hidden h-full flex flex-col cursor-pointer"
+    className="group relative overflow-hidden h-full flex flex-col cursor-pointer bg-secondary/20"
     onClick={() => setIsOpen((prev) => !prev)}
     >
       <div className="relative h-56 overflow-hidden">
@@ -309,17 +313,25 @@ function RestaurantCard({ restaurant }: { restaurant: Restaurant }) {
             <p className="text-white text-sm md:text-base max-w-xs mx-auto">
               {restaurant.description}
             </p>
-            <Button size="lg" variant="secondary">
-              {t("activities.explore")}
-            </Button>
+            <Link
+              href={restaurant.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              prefetch={false}
+            >
+              <Button size="lg" variant="secondary">
+                {t("activities.explore")}
+              </Button>
+            </Link>
+
           </div>
         </div>
       </div>
       <CardHeader>
-        <CardTitle>{restaurant.name}</CardTitle>
+        <CardTitle className="text-foreground">{restaurant.name}</CardTitle>
       </CardHeader>
       <CardContent className="flex-1">
-        <p className="text-sm text-gray-600">{restaurant.location}</p>
+        <p className="text-sm text-foreground/80">{restaurant.location}</p>
       </CardContent>
     </Card>
   )
