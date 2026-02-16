@@ -5,6 +5,14 @@ import { QR_TOKENS } from "@/lib/auth"
 export function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl
 
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/favicon.ico") ||
+    pathname.match(/\.(jpg|jpeg|png|webp|svg)$/)
+  ) {
+    return NextResponse.next()
+  }
+
   // Allow login page
   if (pathname === "/login") {
     return NextResponse.next()
