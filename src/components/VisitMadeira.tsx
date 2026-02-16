@@ -75,7 +75,7 @@ function AutoScrollCard({ spec }: { spec: CardSpec }) {
   const { t } = useLanguage()
   
   return (
-    <Card className="group relative overflow-hidden">
+    <Card className="bg-secondary/20 group relative overflow-hidden">
       <CardHeader>
         <CardTitle>{spec.title}</CardTitle>
       </CardHeader>
