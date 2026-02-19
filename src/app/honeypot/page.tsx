@@ -34,13 +34,13 @@ function HoneyPotPageContent() {
         </section>
 
         {/* Progress Section */}
-        <section className="py-20 bg-muted/20">
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 
                 {/* Left Column – Image & Message */}
-                <Card className="overflow-hidden">
+                <Card className="overflow-hidden bg-secondary/20">
                   <div className="relative h-72">
                     <img
                       src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200"
@@ -80,26 +80,7 @@ function HoneyPotPageContent() {
                         />
                       </div>
 
-                      {/* Milestone Lines 
-                      {[25, 50, 75].map((value) => (
-                        <div
-                          key={value}
-                          className="absolute left-0 w-full h-px bg-gray-400"
-                          style={{ bottom: `${value}%` }}
-                        />
-                      ))}
-                        */}
                     </div>
-
-                    {/* Percentage Labels 
-                    <div className="flex flex-col justify-between h-96 text-sm text-gray-600">
-                      <span>100%</span>
-                      <span>75%</span>
-                      <span>50%</span>
-                      <span>25%</span>
-                      <span>0%</span>
-                    </div>'
-                    */}
                   </div>
                 </div>
 
