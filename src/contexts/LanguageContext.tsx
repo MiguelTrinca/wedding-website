@@ -157,7 +157,7 @@ const translations: Record<Language, Record<string, string>> = {
     "rsvp.guestFoodRestrictions": "Food Restrictions or Dietary Preferences",
     "rsvp.submit": "Submit RSVP",
     "rsvp.thankYou": "Thank You!",
-    "rsvp.thankYouMessage": "Your RSVP has been received. We can't wait to celebrate with you!",
+    "rsvp.thankYouMessage": "Your RSVP has been received. We can't wait to celebrate with you! Please feel free to check other sections of our website",
     
     // Dress Code
     "dressCode.title": "Dress Code",
@@ -389,7 +389,7 @@ const translations: Record<Language, Record<string, string>> = {
     "rsvp.guestFoodRestrictions": "Restrições Alimentares ou Preferências Dietéticas",
     "rsvp.submit": "Submeter RSVP",
     "rsvp.thankYou": "Obrigado!",
-    "rsvp.thankYouMessage": "O vosso RSVP foi recebido. Mal podemos esperar para celebrar convosco!",
+    "rsvp.thankYouMessage": "O vosso RSVP foi recebido. Mal podemos esperar para celebrar convosco! Por favor sinta-se à vontade de explorar o nosso website",
     
     // Dress Code
     "dressCode.title": "Código de Vestuário",
