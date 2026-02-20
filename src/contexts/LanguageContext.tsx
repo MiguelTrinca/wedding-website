@@ -160,6 +160,7 @@ const translations: Record<Language, Record<string, string>> = {
     "rsvp.guestIsKid": "This guest is a child (0-12 years old)",
     "rsvp.guestFoodRestrictions": "Food Restrictions or Dietary Preferences",
     "rsvp.submit": "Submit RSVP",
+    "rsvp.submitting": "Submitting...",
     "rsvp.thankYou": "Thank You!",
     "rsvp.thankYouMessage": "Your RSVP has been received. We can't wait to celebrate with you! Please feel free to check other sections of our website",
     
