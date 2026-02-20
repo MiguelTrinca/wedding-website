@@ -144,7 +144,7 @@ export default function Header() {
 
               <div className="pt-4 border-t">
 
-                <Button asChild>
+                <Button asChild onClick={() => setOpen(false)}>
                   <Link href="/rsvp">{t("nav.rsvp")}</Link>
                 </Button>
 
