@@ -140,7 +140,55 @@ export default function RSVP() {
     }
   
     setIsSubmitted(true)
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+
   }
+
+  const isMainGuestValid = () => {
+    if (!formData.firstName.trim()) return false
+    if (!formData.lastName.trim()) return false
+    if (!formData.email.trim()) return false
+    if (!formData.isAttending) return false
+  
+    if (formData.isAttending === "yes") {
+      if (!formData.needsTransportation) return false
+      if (formData.guestCount === undefined) return false
+      if (!formData.foodRestrictions) return false
+  
+      if (
+        formData.foodRestrictions === "other" &&
+        !formData.additionalFoodNotes.trim()
+      )
+        return false
+    }
+  
+    return true
+  }
+
+  const areGuestsValid = () => {
+    if (formData.isAttending !== "yes") return true
+  
+    return guests.every((guest) => {
+      if (!guest.firstName.trim()) return false
+      if (!guest.lastName.trim()) return false
+      if (!guest.foodRestrictions) return false
+  
+      if (
+        guest.foodRestrictions === "other" &&
+        !guest.additionalFoodNotes.trim()
+      ) {
+        return false
+      }
+  
+      return true
+    })
+  }
+
+  const isFormValid = isMainGuestValid() && areGuestsValid()
 
   function AutoScrollCard({ spec }: { spec: CardSpec }) {
     const { t } = useLanguage()
@@ -194,7 +242,7 @@ export default function RSVP() {
   }
 
 
-  if (!isSubmitted) {
+  if (isSubmitted) {
   return (
     <div className="min-h-screen bg-background py-12 px-4">
       <div className="max-w-2xl mx-auto">
@@ -235,29 +283,55 @@ export default function RSVP() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-12 px-4">
+    <div className="min-h-screen bg-background py-12 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Thank you message */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-green-700 mb-4">{t("rsvp.title")}</h1>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <h1 className="text-4xl font-bold text-secondary mb-4">{t("rsvp.title")}</h1>
+          <p className="text-lg text-foreground/80 leading-relaxed">
             {t("rsvp.description")}
           </p>
-          <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-            <p className="text-sm text-green-800">
-              <strong>{t("rsvp.kidsWelcome")}</strong>
-            </p>
-          </div>
-          <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-            <p className="text-sm text-green-800">
-              <strong>{t("rsvp.transportation")}</strong>
-            </p>
-          </div>
-          <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-            <p className="text-sm text-green-800">
-              <strong>{t("rsvp.foodRestrictions")}</strong>
-            </p>
-          </div>
+          <br/>
+          <Card className="text-left overflow-hidden bg-secondary/20">
+            <CardHeader>
+              <CardTitle className="text-foreground">{t("rsvp.kidsWelcomeTitle")}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-lg text-foreground/80">
+                {t("rsvp.kidsWelcome")}
+              </p>
+          </CardContent>
+          </Card>
+
+          <br/>
+
+          <Card className="text-left overflow-hidden bg-secondary/20">
+            <CardHeader>
+              <CardTitle className="text-foreground">{t("rsvp.transportationTitle")}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-lg text-foreground/80">
+                {t("rsvp.transportation")}
+              </p>
+          </CardContent>
+          </Card>
+
+          <br/>
+
+          <Card className="text-left overflow-hidden bg-secondary/20">
+            <CardHeader>
+              <CardTitle className="text-foreground">{t("rsvp.foodCardTitle")}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-lg text-foreground/80">
+                {t("rsvp.foodCard")}
+              </p>
+          </CardContent>
+          </Card>
+
+
+          <br/>
+
         </div>
 
         {/* RSVP Form */}
@@ -271,10 +345,13 @@ export default function RSVP() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <Label 
-                    htmlFor="firstName" //className="block text-sm font-medium text-gray-700 mb-2"
+                    htmlFor="firstName" 
                   >
                     {t("rsvp.firstName")} *
                   </Label>
+                  <p className="text-xs text-foreground/60 mt-1">
+                    {t("rsvp.nameHelp")}
+                  </p>
                   <InputGroup>
                     <InputGroupInput 
                       type="text"
@@ -289,7 +366,7 @@ export default function RSVP() {
                 </div>
                 <div>
                 <Label 
-                    htmlFor="lastName" //className="block text-sm font-medium text-gray-700 mb-2"
+                    htmlFor="lastName" 
                   >
                     {t("rsvp.lastName")} *
                   </Label>
@@ -355,7 +432,7 @@ export default function RSVP() {
               {/* Transportation - only show if attending */}
               {formData.isAttending === "yes" && (
                 <div>
-                  <Label htmlFor="transportation" className="block text-sm font-medium text-gray-700 mb-2">
+                  <Label htmlFor="transportation" className="block text-sm font-medium text-foreground mb-2">
                     {t("rsvp.needsTransportation")} *
                   </Label>
                   <Select
@@ -376,10 +453,10 @@ export default function RSVP() {
               {/* Guest Count - only show if attending */}
               {formData.isAttending === "yes" && (
                 <div>
-                  <Label htmlFor="guestCount" className="block text-sm font-medium text-gray-700 mb-2">
-                    {t("rsvp.guestCount")}
+                  <Label htmlFor="guestCount" className="block text-sm font-medium text-foreground mb-2">
+                    {t("rsvp.guestCount")} *
                   </Label>
-                  <p className="text-xs text-gray-500 mt-1">
+                  <p className="text-xs text-foreground/60 mt-1">
                     {t("rsvp.guestCountHelp")}
                   </p>
                   <Select
@@ -406,7 +483,7 @@ export default function RSVP() {
               {formData.isAttending === "yes" && (
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="mainGuestFoodRestrictions" className="block text-sm font-medium text-gray-700 mb-2">
+                    <Label htmlFor="mainGuestFoodRestrictions" className="block text-sm font-medium text-foreground mb-2">
                       {t("rsvp.foodRestrictionsTitle")}
                     </Label>
                     <Select
@@ -445,9 +522,9 @@ export default function RSVP() {
               )}
 
               {/* Additional Guest Information */}
-              {formData.isAttending === "yes" && (
+              {formData.isAttending === "yes" && guests.length >= 1 && (
                 <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-gray-700">
+                  <h3 className="text-lg font-medium text-foreground">
                     {t("rsvp.additionalGuests")}
                   </h3>
                   <AnimatePresence>
@@ -462,7 +539,7 @@ export default function RSVP() {
                     >
                     <Card key={index} className="bg-gray-50">
                       <CardContent className="pt-4">
-                        <h4 className="text-sm font-medium text-gray-600 mb-3">
+                        <h4 className="text-sm font-medium text-secondary mb-3">
                           {t("rsvp.guest")} {index + 1}
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -470,30 +547,27 @@ export default function RSVP() {
                             <label className="block text-sm font-medium text-gray-700 mb-2">
                               {t("rsvp.guestFirstName")}
                             </label>
-                            {/*<input
-                              type="text"
-                              value={guest.firstName}
-                              onChange={(e) => handleGuestChange(index, "firstName", e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                            />*/}
+
+                            <p className="text-xs text-foreground/60 mt-1">
+                              {t("rsvp.nameHelp")}
+                            </p>
+
                             <Input
                               type="text"
                               value={guest.firstName}
                               onChange={(e) => handleGuestChange(index, "firstName", e.target.value)}
-                              placeholder={t("rsvp.guestFirstName")}
-                              className="bg-white text-gray-900"
+                              className="bg-white text-foreground"
                             />
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                            <label className="block text-sm font-medium text-foreground mb-2">
                               {t("rsvp.guestLastName")}
                             </label>
                             <Input
                               type="text"
                               value={guest.lastName}
                               onChange={(e) => handleGuestChange(index, "lastName", e.target.value)}
-                              placeholder={t("rsvp.guestLastName")}
-                              className="bg-white text-gray-900"
+                              className="bg-white text-foreground"
                             />
 
                           </div>
@@ -504,7 +578,7 @@ export default function RSVP() {
                             type="checkbox"
                             checked={guest.isKid}
                             onChange={(e) => handleGuestChange(index, "isKid", e.target.checked)}
-                            className="accent-green-600"
+                            className="accent-secondary"
                           />
                           <span className="text-sm text-gray-700">
                             {t("rsvp.guestIsKid")}
@@ -558,12 +632,14 @@ export default function RSVP() {
               )}
 
               <div className="pt-4">
-                <Button 
-                  type="submit" 
-                  className="w-full bg-green-700 hover:bg-green-800 text-white py-3"
-                >
-                  {t("rsvp.submit")}
-                </Button>
+              <Button 
+                type="submit"
+                variant="default"
+                className="w-full py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={!isFormValid}
+              >
+                {t("rsvp.submit")}
+              </Button>
               </div>
             </form>
           </CardContent>
