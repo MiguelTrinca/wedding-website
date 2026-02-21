@@ -218,27 +218,6 @@ function MenDressCodePageContent() {
                 </div>
             </div>
 
-              {/*
-              <div className="relative">
-                <Carousel className="w-full max-w-4xl mx-auto">
-                  <CarouselContent>
-                    {tailcoatExamples.map((example, index) => (
-                      <CarouselItem key={index}>
-                        <div className="relative">
-                          <img
-                            src={example.src}
-                            alt={example.alt}
-                            className="w-full h-[600px] object-cover rounded-lg"
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
-              </div>
-              */}
             </div>
           </section>
 
