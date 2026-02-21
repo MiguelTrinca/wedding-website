@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { act, useEffect, useState } from "react"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -15,6 +15,7 @@ type Activity = {
   description: string
   image: string
   alt: string
+  website: string
 }
 
 type Restaurant = {
@@ -33,51 +34,45 @@ function ActivitiesPageContent() {
     {
       title: t("activities.hiking"),
       description: t("activities.hikingDesc"),
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800",
+      image: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=center,quality=60,height=720,dpr=1/tour_img/cdf3d4e46def7d3d.jpeg",
       alt: "Hiking trail",
+      website: 'https://visitmadeira.com/pt/o-que-fazer/exploradores-da-natureza/atividades/caminhadas/'
     },
     {
       title: t("activities.beach"),
       description: t("activities.beachDesc"),
-      image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800",
+      image: "https://www.got2globe.com/wp-content/uploads/2024/07/porto-moniz-ilha-madeira-piscinas-naturais-novas.jpg.webp",
       alt: "Beach",
+      website: ""
     },
     {
       title: t("activities.viewpoints"),
       description: t("activities.viewpointsDesc"),
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      image: "https://blog.madeira.best/storage/uploads/img/2020-04-29-1030535f64dcc25e2375f64dcc25e2f9.jpeg",
       alt: "Viewpoint",
+      website: ""
     },
     {
-      title: t("activities.waterSports"),
+      title: t("activities.waterSports"), // iguarias
       description: t("activities.waterSportsDesc"),
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800",
-      alt: "Water sports",
+      image: "https://visitmadeira.com/media/pxsdhliu/lapas1-henrique-seruca.jpg?width=1920&height=1080&rnd=133408949751500000",
+      alt: "Iguarias",
+      website: ""
     },
     {
-      title: t("activities.gardens"),
+      title: t("activities.gardens"), // vida noturna
       description: t("activities.gardensDesc"),
-      image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800",
-      alt: "Garden",
+      image: "https://visitmadeira.com/media/oghbxujq/zona-velha1-hugo-reis.jpg?width=1920&height=1080&rnd=133277701719530000",
+      alt: "Night Life",
+      website: ""
     },
     {
-      title: t("activities.cableCar"),
+      title: t("activities.cableCar"), // diversos
       description: t("activities.cableCarDesc"),
-      image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800",
-      alt: "Cable car",
-    },
-    {
-      title: t("activities.wineTasting"),
-      description: t("activities.wineTastingDesc"),
-      image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800",
-      alt: "Wine tasting",
-    },
-    {
-      title: t("activities.fishing"),
-      description: t("activities.fishingDesc"),
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800",
-      alt: "Fishing",
-    },
+      image: "https://static.portugalbywine.com/media//MULTIMEDIA/FOTOS/4341/19036516483999W_1920.jpg",
+      alt: "Other",
+      website: ""
+    }
   ]
 
   const restaurants: Restaurant[] = [
@@ -104,6 +99,22 @@ function ActivitiesPageContent() {
       image: "https://www.restaurantesantoantonio.com/img/04Menu05.jpg",
       alt: "Santo Antonio restaurant",
       website: "https://www.restaurantesantoantonio.com/"
+    },
+    {
+      name: t("restaurants.aVista"),
+      description: t("restaurants.santoAntonioDesc"),
+      location: t("restaurants.santoAntonioLocation"),
+      image: "https://www.portobay.com/remote.axd/pbaybucket.s3.amazonaws.com/media/2850477/lstcb_avista_dinner_2_baixa.jpg?mode=crop&width=1920&height=0",
+      alt: "AVista restaurant",
+      website: "https://www.portobay.com/pt/restaurantes/restaurantes-madeira/avista/"
+    },
+    {
+      name: t("restaurants.nini"),
+      description: t("restaurants.santoAntonioDesc"),
+      location: t("restaurants.santoAntonioLocation"),
+      image: "https://i0.wp.com/portugalconfidential.com/wp-content/uploads/2019/07/DC-Atelier-Nini-Design-Center-feature.jpg?w=1400&ssl=1",
+      alt: "Nini restaurant",
+      website: "https://ninidesigncentre.com/restaurante/"
     },
   ]
 
@@ -259,9 +270,16 @@ function ActivityCard({ activity }: { activity: Activity }) {
             <p className="text-white text-sm md:text-base max-w-xs mx-auto">
               {activity.description}
             </p>
-            <Button size="lg" variant="secondary">
-              {t("activities.explore")}
-            </Button>
+            <Link
+              href={activity.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              prefetch={false}
+            >
+              <Button size="lg" variant="secondary">
+                {t("activities.explore")}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

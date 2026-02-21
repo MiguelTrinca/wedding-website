@@ -42,26 +42,20 @@ export default function Footer() {
                     href="mailto:beatriz.miguel.wedding@gmail.com"
                     className="text-background/80 hover:text-secondary transition-colors"
                   >
-                    beatriz.miguel.wedding@gmail.com
+                    miguel.trinca@hotmail.com / beatrizfaria98@hotmail.com
                   </a>
                 </div>
 
                 <div className="flex items-center justify-center md:justify-start gap-3">
                   <Phone className="h-5 w-5 text-secondary" />
                   <a
-                    href="tel:+351123456789"
+                    href="tel:+351933767045"
                     className="text-background/80 hover:text-secondary transition-colors"
                   >
-                    +351 123 456 789
+                    +351 933 767 045  / +351 962 597 903
                   </a>
                 </div>
 
-                <div className="flex items-center justify-center md:justify-start gap-3">
-                  <MapPin className="h-5 w-5 text-secondary" />
-                  <span className="text-background/80">
-                    Rua da Quinta, 123, Madeira
-                  </span>
-                </div>
               </div>
             </div>
           </div>

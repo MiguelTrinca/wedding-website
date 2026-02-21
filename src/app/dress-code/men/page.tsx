@@ -13,20 +13,20 @@ function MenDressCodePageContent() {
   // Real-life tailcoat examples for carousel
   const tailcoatExamples = [
     {
-      src: "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800&q=80&fit=crop",
-      alt: "Man in formal tailcoat"
+      src: "https://i.pinimg.com/736x/ee/b3/ab/eeb3ab301f32fa87ef2f7b66e42e7c88.jpg",
+      alt: "Beckam Tailcoat"
     },
     {
-      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop",
-      alt: "Formal tailcoat attire example"
+      src: "https://www.wedmagazine.co.uk/content/images/FAVOURBROOK_SHOT_01_126.jpg",
+      alt: "Tailcoat example"
     },
     {
-      src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80&fit=crop",
-      alt: "Traditional tailcoat example"
+      src: "https://i.pinimg.com/736x/ae/85/7f/ae857f9ac09037f2e330cde4fc22f173.jpg",
+      alt: "Two men dressed with tailcoat"
     },
     {
-      src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80&fit=crop",
-      alt: "Elegant tailcoat formal wear"
+      src: "https://www.afarleysuithire.co.uk/wp-content/uploads/2024/03/240890020_436922507632654_3287594996395485224_n-e1711630379576.jpg",
+      alt: "Friends with tailcoat"
     },
   ]
 
@@ -83,7 +83,7 @@ function MenDressCodePageContent() {
                   <div className="relative bg-secondary/20  rounded-lg p-4 md:p-8 border-2 border-gray-200">
                     <div className="relative aspect-[2/3] max-w-xs mx-auto">
                       <img
-                        src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=400&q=80&fit=crop"
+                        src="https://i.pinimg.com/736x/ee/b3/ab/eeb3ab301f32fa87ef2f7b66e42e7c88.jpg"
                         alt="Traditional tailcoat illustration"
                         className="w-full h-full rounded-xl  object-contain"
                         style={{ filter: 'grayscale(100%) contrast(1.2)' }}

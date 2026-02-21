@@ -32,63 +32,7 @@ function HoneyPotPageContent() {
             </p>
           </div>
         </section>
-
-        {/* Progress Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                
-                {/* Left Column – Image & Message */}
-                <Card className="overflow-hidden bg-secondary/20">
-                  <div className="relative h-72">
-                    <img
-                      src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200"
-                      alt="Honeymoon destination placeholder"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  <CardHeader>
-                    <CardTitle className="text-foreground">{t("honeyPot.goalProgress")}</CardTitle>
-                  </CardHeader>
-
-                  <CardContent>
-                    <p className="text-foreground/80">
-                      {t("honeyPot.progressMessage")}
-                    </p>
-                  </CardContent>
-                </Card>
-
-                {/* Right Column – Vertical Progress Visualization */}
-                <div className="flex flex-col items-center gap-6">
-                  
-                  {/* Progress Percentage */}
-                  <h3 className="text-3xl font-bold text-foreground">
-                    {Math.round(progress)}%
-                  </h3>
-
-                  <div className="flex items-center gap-6">
-                    {/* Vertical Bar */}
-                    <div className="relative h-96 w-10">
-                      {/* Background */}
-                      <div className="absolute inset-0 bg-gray-200 rounded-full overflow-hidden">
-                        {/* Filled Progress */}
-                        <div
-                          className="absolute bottom-0 w-full bg-primary transition-all duration-700"
-                          style={{ height: `${progress}%` }}
-                        />
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
+      
 
         {/* Donate Section */}
         <section className="py-20 bg-gray-50">
