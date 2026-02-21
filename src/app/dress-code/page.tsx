@@ -20,7 +20,7 @@ function DressCodePageContent() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
               {t("dressCode.title")}
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-foreground/80 max-w-2xl mx-auto">
               {t("dressCode.description")}
             </p>
           </div>
@@ -41,9 +41,9 @@ function DressCodePageContent() {
                   
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h2 className="text-3xl font-bold text-white mb-2">{t("dressCode.women")}</h2>
-                    <p className="text-white/90 text-lg">{t("dressCode.womenDesc")}</p>
-                    <div className="mt-4 flex items-center text-white/90">
+                    <h2 className="text-3xl font-bold text-background mb-2">{t("dressCode.women")}</h2>
+                    <p className="text-background/80 text-lg">{t("dressCode.womenDesc")}</p>
+                    <div className="mt-4 flex items-center text-background/60">
                       <span className="text-sm font-medium">{t("dressCode.viewDetails")}</span>
                       <svg
                         className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform"
@@ -78,9 +78,9 @@ function DressCodePageContent() {
                   
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h2 className="text-3xl font-bold text-white mb-2">{t("dressCode.men")}</h2>
-                    <p className="text-white/90 text-lg">{t("dressCode.menDesc")}</p>
-                    <div className="mt-4 flex items-center text-white/90">
+                    <h2 className="text-3xl font-bold text-background mb-2">{t("dressCode.men")}</h2>
+                    <p className="text-background/80 text-lg">{t("dressCode.menDesc")}</p>
+                    <div className="mt-4 flex items-center text-background/60">
                       <span className="text-sm font-medium">{t("dressCode.viewDetails")}</span>
                       <svg
                         className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform"

@@ -19,7 +19,7 @@ function WomenDressCodePageContent() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               {t("dressCodeWomen.title")}
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
               {t("dressCodeWomen.description")}
             </p>
           </div>
@@ -30,12 +30,12 @@ function WomenDressCodePageContent() {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 {t("dressCodeWomen.formalAttire")}
               </h2>
-              <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <div className="space-y-4 text-lg text-foreground/80 leading-relaxed">
                 <p>
                   {t("dressCodeWomen.formalAttireDesc1")}
                 </p>
                 <div className="space-y-3 mt-6">
-                  <p className="font-semibold text-foreground">{t("dressCodeWomen.recommended")}</p>
+                  <p className="font-bold text-foreground">{t("dressCodeWomen.recommended")}</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>{t("dressCodeWomen.recommended1")}</li>
                     <li>{t("dressCodeWomen.recommended2")}</li>
@@ -160,7 +160,7 @@ function WomenDressCodePageContent() {
                   <h3 className="text-2xl font-semibold text-foreground mb-4">
                     {t("dressCodeWomen.avoidWhite")}
                   </h3>
-                  <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p className="text-lg text-foreground/80 leading-relaxed">
                     {t("dressCodeWomen.avoidWhiteDesc")}
                   </p>
                 </div>
@@ -170,19 +170,19 @@ function WomenDressCodePageContent() {
                   <div className="grid grid-cols-4 gap-3">
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-white"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorWhite")}</p>
+                      <p className="text-sm text-center text-foreground/60">{t("dressCodeWomen.colorWhite")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFFF0]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorIvory")}</p>
+                      <p className="text-sm text-center text-foreground/60">{t("dressCodeWomen.colorIvory")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FAF0E6]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorOffWhite")}</p>
+                      <p className="text-sm text-center text-foreground/60">{t("dressCodeWomen.colorOffWhite")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFDD0]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorCream")}</p>
+                      <p className="text-sm text-center text-foreground/60">{t("dressCodeWomen.colorCream")}</p>
                     </div>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ function WomenDressCodePageContent() {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
                 {t("dressCodeWomen.otherColors")}
               </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center leading-relaxed">
+              <p className="text-lg text-foreground/80 mb-8 text-center leading-relaxed">
                 {t("dressCodeWomen.otherColorsDesc")}
               </p>
               
@@ -273,7 +273,7 @@ function WomenDressCodePageContent() {
           {/* Closing Note Section */}
           <section className="mb-12">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic">
+              <p className="text-lg text-accent leading-relaxed italic">
                 {t("dressCodeWomen.closing")}
               </p>
             </div>

@@ -39,7 +39,7 @@ function MenDressCodePageContent() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               {t("dressCodeMen.title")}
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
               {t("dressCodeMen.description")}
             </p>
           </div>
@@ -50,7 +50,7 @@ function MenDressCodePageContent() {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 {t("dressCodeMen.formalRequired")}
               </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-lg text-foreground/80 leading-relaxed">
                 {t("dressCodeMen.formalRequiredDesc")}
               </p>
             </div>
@@ -62,7 +62,7 @@ function MenDressCodePageContent() {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 {t("dressCodeMen.tailcoat")}
               </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-lg text-foreground/80 leading-relaxed">
                 {t("dressCodeMen.tailcoatDesc")}
               </p>
             </div>
@@ -78,7 +78,7 @@ function MenDressCodePageContent() {
               <div className="relative flex flex-col md:flex-row gap-4 md:gap-8">
                 {/* Left: Illustration */}
                 <div className="flex-shrink-0 w-full md:w-2/5">
-                  <div className="relative bg-white dark:bg-gray-800 rounded-lg p-4 md:p-8 border-2 border-gray-200 dark:border-gray-700">
+                  <div className="relative bg-white  rounded-lg p-4 md:p-8 border-2 border-gray-200">
                     <div className="relative aspect-[2/3] max-w-xs mx-auto">
                       <img
                         src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=400&q=80&fit=crop"
@@ -98,7 +98,7 @@ function MenDressCodePageContent() {
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
                       <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.tailcoatJacket")}</h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-sm">
+                      <p className="text-foreground/60 text-sm">
                         {t("dressCodeMen.tailcoatJacketDesc")}
                       </p>
                     </div>
@@ -110,7 +110,7 @@ function MenDressCodePageContent() {
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
                       <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.shirt")}</h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-sm">
+                      <p className="text-foreground/60 text-sm">
                         {t("dressCodeMen.shirtDesc")}
                       </p>
                     </div>
@@ -122,7 +122,7 @@ function MenDressCodePageContent() {
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
                       <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.waistcoat")}</h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-sm">
+                      <p className="text-foreground/60 text-sm">
                         {t("dressCodeMen.waistcoatDesc")}
                       </p>
                     </div>
@@ -134,7 +134,7 @@ function MenDressCodePageContent() {
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
                       <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.tie")}</h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-sm">
+                      <p className="text-foreground/60 text-sm">
                         {t("dressCodeMen.tieDesc")}
                       </p>
                     </div>
@@ -146,7 +146,7 @@ function MenDressCodePageContent() {
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
                       <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.trousers")}</h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-sm">
+                      <p className="text-foreground/60 text-sm">
                         {t("dressCodeMen.trousersDesc")}
                       </p>
                     </div>
@@ -158,7 +158,7 @@ function MenDressCodePageContent() {
                     <div className="hidden md:block absolute -left-16 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent"></div>
                     <div>
                       <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">{t("dressCodeMen.shoes")}</h3>
-                      <p className="text-gray-700 dark:text-gray-300 text-sm">
+                      <p className="text-foreground/60 text-sm">
                         {t("dressCodeMen.shoesDesc")}
                       </p>
                     </div>
@@ -208,7 +208,7 @@ function MenDressCodePageContent() {
                     {t("dressCodeMen.avoidWhite")}
                   </h2>
                   
-                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
                     {t("dressCodeMen.avoidWhiteDesc")}
                   </p>
 
@@ -216,19 +216,19 @@ function MenDressCodePageContent() {
                   <div className="grid grid-cols-4 gap-3">
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-white"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorWhite")}</p>
+                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorWhite")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFFF0]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorIvory")}</p>
+                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorIvory")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FAF0E6]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorOffWhite")}</p>
+                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorOffWhite")}</p>
                     </div>
                     <div className="space-y-2">
                       <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFDD0]"></div>
-                      <p className="text-sm text-center text-gray-600 dark:text-gray-400">{t("dressCodeWomen.colorCream")}</p>
+                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorCream")}</p>
                     </div>
                   </div>
                 </div>
@@ -239,11 +239,11 @@ function MenDressCodePageContent() {
                     {t("dressCodeMen.avoidInformal")}
                   </h2>
                   
-                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
                     {t("dressCodeMen.avoidInformalDesc")}
                   </p>
                   
-                  <ul className="space-y-4 text-lg text-gray-700 dark:text-gray-300">
+                  <ul className="space-y-4 text-lg text-foreground/80">
                     <li className="flex items-start">
                       <span className="mr-3 text-primary font-bold">•</span>
                       <span>{t("dressCodeMen.avoidSneakers")}</span>
@@ -269,7 +269,7 @@ function MenDressCodePageContent() {
           {/* 7. Closing Note Section */}
           <section className="mb-12">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic">
+              <p className="text-lg text-accent leading-relaxed italic">
                 {t("dressCodeMen.closing")}
               </p>
             </div>
