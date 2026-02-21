@@ -5,9 +5,11 @@ import Footer from "@/components/Footer"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { LanguageProvider } from "@/contexts/LanguageContext"
+import { useState } from "react"
 
 function MenDressCodePageContent() {
   const { t } = useLanguage()
+  const [current, setCurrent] = useState(0)
   // Real-life tailcoat examples for carousel
   const tailcoatExamples = [
     {
@@ -78,12 +80,12 @@ function MenDressCodePageContent() {
               <div className="relative flex flex-col md:flex-row gap-4 md:gap-8">
                 {/* Left: Illustration */}
                 <div className="flex-shrink-0 w-full md:w-2/5">
-                  <div className="relative bg-white  rounded-lg p-4 md:p-8 border-2 border-gray-200">
+                  <div className="relative bg-secondary/20  rounded-lg p-4 md:p-8 border-2 border-gray-200">
                     <div className="relative aspect-[2/3] max-w-xs mx-auto">
                       <img
                         src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=400&q=80&fit=crop"
                         alt="Traditional tailcoat illustration"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full rounded-xl  object-contain"
                         style={{ filter: 'grayscale(100%) contrast(1.2)' }}
                       />
                     </div>
@@ -176,6 +178,48 @@ function MenDressCodePageContent() {
               </h2>
               
               <div className="relative">
+                <Carousel
+                  className="w-full max-w-lg mx-auto rounded-xl border bg-secondary/20 shadow-lg p-4"
+                  opts={{ loop: true }}
+                  setApi={(api) => {
+                    if (!api) return
+                    setCurrent(api.selectedScrollSnap())
+                    api.on("select", () => setCurrent(api.selectedScrollSnap()))
+                  }}
+                >
+                  <CarouselContent className="-ml-4">
+                    {tailcoatExamples.map((example, index) => (
+                      <CarouselItem key={index}>
+                        <div className="relative">
+                          <img
+                            src={example.src}
+                            alt={example.alt}
+                            className="w-full h-[600px] object-cover rounded-lg"
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+                
+                {/* Pagination dots */}
+                <div className="mt-4 flex justify-center gap-2">
+                  {tailcoatExamples.map((_, index) => (
+                    <span
+                      key={index}
+                      className={`h-2 w-2 rounded-full transition-colors ${
+                        index === current ? "bg-primary" : "bg-muted"
+                      }`}
+                    />
+                  ))}
+                </div>
+            </div>
+
+              {/*
+              <div className="relative">
                 <Carousel className="w-full max-w-4xl mx-auto">
                   <CarouselContent>
                     {tailcoatExamples.map((example, index) => (
@@ -194,6 +238,7 @@ function MenDressCodePageContent() {
                   <CarouselNext />
                 </Carousel>
               </div>
+              */}
             </div>
           </section>
 
