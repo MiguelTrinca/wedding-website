@@ -5,6 +5,7 @@ import Footer from "@/components/Footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext"
+import { useState } from "react"
 
 type GiftCardSpec = {
   title: string
@@ -15,6 +16,8 @@ type GiftCardSpec = {
 
 function GiftPageContent() {
   const { t } = useLanguage()
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const giftImages = [
     {
@@ -94,12 +97,7 @@ function GiftPageContent() {
                       <Button
                         size="sm"
                         variant="secondary"
-                        onClick={() =>
-                          window.open(
-                            "https://easywishlist.app/w/w22h1eca8/casamento-teste",
-                            "_blank"
-                          )
-                        }
+                        onClick={() => setIsModalOpen(true)}
                       >
                         {t("gift.gift")}
                       </Button>
@@ -124,12 +122,7 @@ function GiftPageContent() {
 
             <Button
               size="lg"
-              onClick={() =>
-                window.open(
-                  "https://easywishlist.app/w/w22h1eca8/casamento-teste",
-                  "_blank"
-                )
-              }
+              onClick={() => setIsModalOpen(true)}
             >
               {t("gift.gift")}
             </Button>
@@ -138,6 +131,49 @@ function GiftPageContent() {
       </main>
 
       <Footer />
+      
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/30 px-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-md w-full relative">
+            <Button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-3 right-3"
+              variant={"ghost"}
+            >
+              ✕
+            </Button>
+
+            <div className="p-6 space-y-4">
+              <h3 className="text-2xl font-bold text-foreground">
+                {t("gift.modalTitle")}
+              </h3>
+
+              <p className="text-sm text-foreground/60">
+                {t("gift.modalNote")}
+              </p>
+
+              <div className="text-sm text-foreground/80 space-y-2">
+                <p>
+                  <strong>{t("gift.morada")}</strong>
+                </p>
+              </div>
+
+
+              <Button className="w-full" 
+                onClick={() =>{
+                  setIsModalOpen(false)
+                  window.open(
+                    "https://easywishlist.app/w/w22h1eca8/casamento-teste",
+                    "_blank"
+                  )
+                }}>
+                {t("gift.wishlist")}
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }

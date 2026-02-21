@@ -249,6 +249,9 @@ const translations: Record<Language, Record<string, string>> = {
     "gift.thankYouTitle": "Thank You From the Heart ❤️",
     "gift.thankYouMessage": "We are truly grateful for your kindness and generosity. Every gift means a lot to us and will be remembered with love.",
     "gift.gift": "View Wishlist",
+    "gift.modalTitle": "We live in Swiztlerland!",
+    "gift.modalNote": "Dear guests please remember that we live in Swizerland. That being said any gift that you wish to give us would be sent out to our place. Please order from Swiss websites and use the correct address.",
+    "gift.morada": "1700 Fribourg, Suisse, Route du Jura 41, Miguel Trinca"
 
   },
   pt: {
@@ -486,6 +489,10 @@ const translations: Record<Language, Record<string, string>> = {
     "gift.thankYouTitle": "Obrigado do Fundo do Coração ❤️",
     "gift.thankYouMessage": "Somos imensamente gratos pelo vosso carinho e generosidade. Cada presente tem um significado especial para nós e será sempre recordado com amor.",
     "gift.gift": "Ver Lista de Presentes",
+    "gift.modalTitle": "Vivemos na Suiça!",
+    "gift.modalNote": "Caros convidados como vivemos na Suiça por favor tenham a atenção de enviar coisas para a nossa morada e comprar por sites Suiça ou para enviar para a nossa morada que se segue:",
+    "gift.morada": "1700 Fribourg, Suisse, Route du Jura 41, Miguel Trinca"
+  
 
   },
 }
