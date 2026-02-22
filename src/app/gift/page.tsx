@@ -206,7 +206,7 @@ function GiftPageContent() {
                   <strong>{t("honeyPot.accountHolder")}:</strong> Miguel Trinca
                 </p>
                 <p>
-                  <strong>IBAN:</strong> CH00 0000 0000 0000 0000 0
+                  <strong>IBAN:</strong> PT50 0035 0616 0001 8426 2005 5
                 </p>
               </div>
 

@@ -69,7 +69,7 @@ function DressCodePageContent() {
               <Card className="relative overflow-hidden h-[500px] cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-2 hover:border-primary/50">
                 <div className="relative h-full w-full">
                   <img
-                    src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800&q=80&fit=crop"
+                    src="https://i.pinimg.com/736x/ae/85/7f/ae857f9ac09037f2e330cde4fc22f173.jpg"
                     alt="Man in elegant tail coat"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
