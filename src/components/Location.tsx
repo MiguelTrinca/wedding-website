@@ -48,7 +48,7 @@ export default function Location() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-foreground text-2xl">
                   <MapPin className="h-6 w-6 text-secondary" />
-                  Quinta do Furao
+                  Quinta do Furão
                 </CardTitle>
                 <CardDescription className="text-lg">
                   {t("location.cardDescription")}
@@ -65,16 +65,16 @@ export default function Location() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-secondary" />
-                  <span>+351 123 456 789</span>
+                  <span> +351 291 570 100</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-secondary" />
-                  <span>info@quintadofurao.pt</span>
+                  <span>reservations@quintadofurao.com</span>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Map Placeholder */}
+            {/* Map*/}
             <Card className="bg-secondary/20 text-foreground" >
               <CardHeader>
                 <CardTitle>{t("location.mapTitle")}</CardTitle>
@@ -82,7 +82,7 @@ export default function Location() {
               <CardContent>
                 <div className="w-full h-64 bg-secondary/20 rounded-lg flex items-center justify-center">
                     <iframe
-                      title="Quinta do Furao Map"
+                      title="Quinta do Furão Map"
                       src="https://www.google.com/maps?q=quinta+do+fur%C3%A3o+madeira&output=embed"
                       className="w-full h-full border-0"
                       loading="lazy"
@@ -94,6 +94,7 @@ export default function Location() {
           </div>
 
           {/* Image Carousel */}
+          {/** VER COM BABY */}
           <div className="relative">
             <Carousel
               className="w-full max-w-lg mx-auto rounded-xl border bg-secondary/20 shadow-lg p-4"
