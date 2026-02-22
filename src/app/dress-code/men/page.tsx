@@ -46,29 +46,6 @@ function MenDressCodePageContent() {
             </p>
           </div>
 
-          {/* 2. Formal Attire Overview Section */}
-          <section className="mb-20">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                {t("dressCodeMen.formalRequired")}
-              </h2>
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                {t("dressCodeMen.formalRequiredDesc")}
-              </p>
-            </div>
-          </section>
-
-          {/* 3. Tailcoat Requirement Section */}
-          <section className="mb-20">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                {t("dressCodeMen.tailcoat")}
-              </h2>
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                {t("dressCodeMen.tailcoatDesc")}
-              </p>
-            </div>
-          </section>
 
           {/* 4. Tailcoat Anatomy Visualization Section */}
           <section className="mb-20">
@@ -221,74 +198,6 @@ function MenDressCodePageContent() {
             </div>
           </section>
 
-          {/* 6. Avoid Section – Attire & Colors */}
-          <section className="mb-20">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-12 items-start">
-                
-                {/* First Column: Colors */}
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                    {t("dressCodeMen.avoidWhite")}
-                  </h2>
-                  
-                  <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-                    {t("dressCodeMen.avoidWhiteDesc")}
-                  </p>
-
-                  {/* Color Swatches */}
-                  <div className="grid grid-cols-4 gap-3">
-                    <div className="space-y-2">
-                      <div className="h-24 rounded-lg border-2 border-gray-300 bg-white"></div>
-                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorWhite")}</p>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFFF0]"></div>
-                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorIvory")}</p>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FAF0E6]"></div>
-                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorOffWhite")}</p>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFDD0]"></div>
-                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorCream")}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Second Column: Informal Attire */}
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                    {t("dressCodeMen.avoidInformal")}
-                  </h2>
-                  
-                  <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-                    {t("dressCodeMen.avoidInformalDesc")}
-                  </p>
-                  
-                  <ul className="space-y-4 text-lg text-foreground/80">
-                    <li className="flex items-start">
-                      <span className="mr-3 text-primary font-bold">•</span>
-                      <span>{t("dressCodeMen.avoidSneakers")}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-3 text-primary font-bold">•</span>
-                      <span>{t("dressCodeMen.avoidTshirts")}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-3 text-primary font-bold">•</span>
-                      <span>{t("dressCodeMen.avoidPolo")}</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-3 text-primary font-bold">•</span>
-                      <span>{t("dressCodeMen.avoidJeans")}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* 7. Closing Note Section */}
           <section className="mb-12">

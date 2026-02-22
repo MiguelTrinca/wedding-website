@@ -118,7 +118,7 @@ function GiftPageContent() {
               {t("honeyPot.description")}
             </p>
             <div className="py-10">
-              <AnimatedSuitcase percentage={100}/>
+              <AnimatedSuitcase percentage={0}/>
             </div>
           </div>
 
