@@ -38,42 +38,50 @@ export default function AnimatedSuitcase({ percentage }: { percentage: number })
   const { ref, isVisible } = useInView()
   const [currentStage, setCurrentStage] = useState(1)
   const [animateBounce, setAnimateBounce] = useState(false)
+  const [animatedProgress, setAnimatedProgress] = useState(0)
 
   const targetStage = getStage(percentage)
 
   useEffect(() => {
     if (!isVisible) {
-      // Reset everything when leaving viewport
       setCurrentStage(1)
       setAnimateBounce(false)
+      setAnimatedProgress(0)
       return
     }
   
-    if (targetStage === 1) {
-      // No animation needed
-      setCurrentStage(1)
-      return
-    }
+    let start = 0
+    let animationFrame: number
+    const duration = 3000 // ← slower progress (3 seconds)
+    const startTime = performance.now()
   
-    let stage = 1
-    setCurrentStage(1)
-    setAnimateBounce(false)
+    const animate = (time: number) => {
+      const elapsed = time - startTime
+      const progress = Math.min((elapsed / duration) * percentage, percentage)
   
-    const interval = setInterval(() => {
-      stage += 1
-      setCurrentStage(stage)
+      setAnimatedProgress(progress)
   
-      if (stage >= targetStage) {
-        clearInterval(interval)
-  
-        setTimeout(() => {
-          setAnimateBounce(true)
-        }, 300)
+      // Stage transitions triggered by progress thresholds
+      if (progress >= 100) {
+        setCurrentStage(4)
+        setAnimateBounce(true)
+      } else if (progress >= 75) {
+        setCurrentStage(3)
+      } else if (progress >= 50) {
+        setCurrentStage(2)
+      } else {
+        setCurrentStage(1)
       }
-    }, 600)
   
-    return () => clearInterval(interval)
-  }, [isVisible, targetStage])
+      if (progress < percentage) {
+        animationFrame = requestAnimationFrame(animate)
+      }
+    }
+  
+    animationFrame = requestAnimationFrame(animate)
+  
+    return () => cancelAnimationFrame(animationFrame)
+  }, [isVisible, percentage])
 
   return (
     <div ref={ref} className="flex flex-col items-center">
@@ -97,7 +105,7 @@ export default function AnimatedSuitcase({ percentage }: { percentage: number })
         <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-secondary transition-all duration-1000 ease-out"
-            style={{ width: isVisible ? `${percentage}%` : "0%" }}
+            style={{ width: `${animatedProgress}%` }}
           />
         </div>
         <p className="text-sm text-foreground/70 mt-2 text-center">

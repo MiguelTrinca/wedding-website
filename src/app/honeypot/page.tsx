@@ -61,37 +61,13 @@ function HoneyPotPageContent() {
                   </CardContent>
                 </Card>
 
-                {/* Right Column – Vertical Progress Visualization */}
-                <div className="flex flex-col items-center gap-6">
-                  
-                  {/* Progress Percentage */}
-                  <h3 className="text-3xl font-bold text-foreground">
-                    {Math.round(progress)}%
-                  </h3>
-
-                  <div className="flex items-center gap-6">
-                    {/* Vertical Bar */}
-                    <div className="relative h-96 w-10">
-                      {/* Background */}
-                      <div className="absolute inset-0 bg-gray-200 rounded-full overflow-hidden">
-                        {/* Filled Progress */}
-                        <div
-                          className="absolute bottom-0 w-full bg-primary transition-all duration-700"
-                          style={{ height: `${progress}%` }}
-                        />
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
+                {/**Animated Suitcase Component */}
+                <AnimatedSuitcase percentage={100}/>
 
               </div>
             </div>
           </div>
         </section>
-
-        {/**Animated Suitcase Component */}
-        <AnimatedSuitcase percentage={40}/>
       
 
         {/* Donate Section */}
