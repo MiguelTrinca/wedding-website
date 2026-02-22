@@ -52,7 +52,7 @@ export default function Ceremony() {
                     href="mailto:paroquia@sedofunchal.pt"
                     className="text-foreground/80 hover:text-secondary transition-colors"
                   >
-                    paroquia@sedofunchal.pt
+                    catedraldofunchal@gmail.com
                   </a>
                 </div>
 
