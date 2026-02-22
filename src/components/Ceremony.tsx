@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { MapPin, Clock, Phone, Mail, Church } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
+import Link from "next/link"
 
 export default function Ceremony() {
   const { t } = useLanguage()
@@ -57,8 +58,13 @@ export default function Ceremony() {
                 </div>
 
                 <div className="pt-4 flex flex-wrap gap-3">
-                  <Button asChild variant="default">
-                    <a href="/nearby-hotels">{t("ceremony.nearbyHotels")}</a>
+                  <Button asChild variant="default" onClick={() =>{
+                  window.open(
+                    "https://www.booking.com/searchresults.pt-pt.html?ss=Funchal&ssne=Funchal&ssne_untouched=Funchal&efdco=1&label=pt-ch-booking-desktop-D9kXu*n8um_NOl_OzpXHGAS652796015484%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-334108349%3Alp9186531%3Ali%3Adec%3Adm&aid=2311236&lang=pt-pt&sb=1&src_elem=sb&src=index&dest_id=-2166199&dest_type=city&checkin=2026-06-16&checkout=2026-06-21&group_adults=1&no_rooms=1&group_children=0",
+                    "_blank"
+                  )
+                }}>
+                   <p>{t("ceremony.nearbyHotels")}</p>
                   </Button>
                   <Button variant="outline" asChild>
                     <a href="/dress-code">{t("ceremony.dressCode")}</a>
