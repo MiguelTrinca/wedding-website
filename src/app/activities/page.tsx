@@ -53,22 +53,22 @@ function ActivitiesPageContent() {
       website: ""
     },
     {
-      title: t("activities.waterSports"), // iguarias
-      description: t("activities.waterSportsDesc"),
+      title: t("activities.iguarias"), 
+      description: t("activities.iguariasDesc"),
       image: "https://visitmadeira.com/media/pxsdhliu/lapas1-henrique-seruca.jpg?width=1920&height=1080&rnd=133408949751500000",
       alt: "Iguarias",
       website: ""
     },
     {
-      title: t("activities.gardens"), // vida noturna
-      description: t("activities.gardensDesc"),
+      title: t("activities.nightLife"), 
+      description: t("activities.nightLifeDesc"),
       image: "https://visitmadeira.com/media/oghbxujq/zona-velha1-hugo-reis.jpg?width=1920&height=1080&rnd=133277701719530000",
       alt: "Night Life",
       website: ""
     },
     {
-      title: t("activities.cableCar"), // diversos
-      description: t("activities.cableCarDesc"),
+      title: t("activities.diversos"),
+      description: t("activities.diversosDesc"),
       image: "https://static.portugalbywine.com/media//MULTIMEDIA/FOTOS/4341/19036516483999W_1920.jpg",
       alt: "Other",
       website: ""
