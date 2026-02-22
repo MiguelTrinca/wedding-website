@@ -6,6 +6,7 @@ import Footer from "@/components/Footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext"
+import AnimatedSuitcase from "@/components/AnimtatedSuitcase"
 
 function HoneyPotPageContent() {
   const { t } = useLanguage()
@@ -88,6 +89,9 @@ function HoneyPotPageContent() {
             </div>
           </div>
         </section>
+
+        {/**Animated Suitcase Component */}
+        <AnimatedSuitcase percentage={40}/>
       
 
         {/* Donate Section */}
