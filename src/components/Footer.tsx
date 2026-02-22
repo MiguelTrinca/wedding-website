@@ -2,6 +2,7 @@
 
 import { Heart, Mail, Phone, MapPin } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
+import { MessageCircle  } from "lucide-react"
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -34,15 +35,14 @@ export default function Footer() {
               <h3 className="text-xl font-semibold mb-4">
                 {t("footer.contact")}
               </h3>
-
               <div className="space-y-3">
                 <div className="flex items-center justify-center md:justify-start gap-3">
                   <Mail className="h-5 w-5 text-secondary" />
                   <a
-                    href="mailto:beatriz.miguel.wedding@gmail.com"
+                    href="mailto:miguel.trinca@hotmail.com"
                     className="text-background/80 hover:text-secondary transition-colors"
                   >
-                    miguel.trinca@hotmail.com / beatrizfaria98@hotmail.com
+                    miguel.trinca@hotmail.com
                   </a>
                 </div>
 
@@ -52,7 +52,32 @@ export default function Footer() {
                     href="tel:+351933767045"
                     className="text-background/80 hover:text-secondary transition-colors"
                   >
-                    +351 933 767 045  / +351 962 597 903
+                    +351 933 767 045  
+                  </a>
+                </div>
+
+
+                <div className="flex items-center justify-center md:justify-start">
+                  ---------------------
+                </div>
+
+                <div className="flex items-center justify-center md:justify-start gap-3">
+                  <Mail className="h-5 w-5 text-secondary" />
+                  <a
+                    href="mailto:beatrizfaria98@hotmail.com"
+                    className="text-background/80 hover:text-secondary transition-colors"
+                  >
+                    beatrizfaria98@hotmail.com
+                  </a>
+                </div>
+
+                <div className="flex items-center justify-center md:justify-start gap-3">
+                  <MessageCircle className="h-5 w-5 text-secondary" /> {/**Ver com baby */}
+                  <a
+                    href="tel:+351933767045"
+                    className="text-background/80 hover:text-secondary transition-colors"
+                  >
+                    +351 962 597 903  
                   </a>
                 </div>
 
