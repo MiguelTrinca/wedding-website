@@ -288,6 +288,13 @@ const translations: Record<Language, Record<string, string>> = {
     "restaurants.othersDesc": "Adega do Pomar, Terreiro, Gazebo, Il Gallo d'Oro, The Dinning Room",
     "restaurants.othersLocation": "Camacha e Funchal, Madeira",
 
+    //Maritimo
+    "maritimo.title": "Maritimo",
+    "maritimo.description": "Maritimo e o melhor",
+    "maritimo.cardTitle": "Maritmo Card",
+    "maritimo.cardDesc": "Maritimo Card Desc",
+    "maritimo.cardLocation": "Madeira e espalhados pelo mundo",
+
     // Transportation
     "transportation.title": "Transporte",
     "transportation.description": "Informações sobre como se deslocar na Madeira",
