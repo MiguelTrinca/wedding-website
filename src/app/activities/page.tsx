@@ -51,35 +51,35 @@ function ActivitiesPageContent() {
       description: t("activities.beachDesc"),
       image: "https://www.got2globe.com/wp-content/uploads/2024/07/porto-moniz-ilha-madeira-piscinas-naturais-novas.jpg.webp",
       alt: "Beach",
-      website: ""
+      website: "https://visitmadeira.com/pt/o-que-fazer/amantes-de-mar/praias/"
     },
     {
       title: t("activities.viewpoints"),
       description: t("activities.viewpointsDesc"),
       image: "https://blog.madeira.best/storage/uploads/img/2020-04-29-1030535f64dcc25e2375f64dcc25e2f9.jpeg",
       alt: "Viewpoint",
-      website: ""
+      website: "https://visitmadeira.com/pt/o-que-fazer/exploradores-da-natureza/miradouros/"
     },
     {
       title: t("activities.iguarias"), 
       description: t("activities.iguariasDesc"),
       image: "https://visitmadeira.com/media/pxsdhliu/lapas1-henrique-seruca.jpg?width=1920&height=1080&rnd=133408949751500000",
       alt: "Iguarias",
-      website: ""
+      website: "https://visitmadeira.com/pt/o-que-fazer/apreciadores-de-gastronomia-e-vinho/gastronomia-tradicional/"
     },
     {
       title: t("activities.nightLife"), 
       description: t("activities.nightLifeDesc"),
       image: "https://visitmadeira.com/media/oghbxujq/zona-velha1-hugo-reis.jpg?width=1920&height=1080&rnd=133277701719530000",
       alt: "Night Life",
-      website: ""
+      website: "https://visitmadeira.com/pt/o-que-fazer/viver-a-cidade-do-funchal/entretenimento/"
     },
     {
       title: t("activities.diversos"),
       description: t("activities.diversosDesc"),
       image: "https://static.portugalbywine.com/media//MULTIMEDIA/FOTOS/4341/19036516483999W_1920.jpg",
       alt: "Other",
-      website: ""
+      website: "https://visitmadeira.com/pt/experiencias/"
     }
   ]
 
@@ -110,16 +110,16 @@ function ActivitiesPageContent() {
     },
     {
       name: t("restaurants.aVista"),
-      description: t("restaurants.santoAntonioDesc"),
-      location: t("restaurants.santoAntonioLocation"),
+      description: t("restaurants.aVistaDesc"),
+      location: t("restaurants.aVistaLocation"),
       image: "https://www.portobay.com/remote.axd/pbaybucket.s3.amazonaws.com/media/2850477/lstcb_avista_dinner_2_baixa.jpg?mode=crop&width=1920&height=0",
       alt: "AVista restaurant",
       website: "https://www.portobay.com/pt/restaurantes/restaurantes-madeira/avista/"
     },
     {
       name: t("restaurants.nini"),
-      description: t("restaurants.santoAntonioDesc"),
-      location: t("restaurants.santoAntonioLocation"),
+      description: t("restaurants.niniDesc"),
+      location: t("restaurants.niniLocation"),
       image: "https://i0.wp.com/portugalconfidential.com/wp-content/uploads/2019/07/DC-Atelier-Nini-Design-Center-feature.jpg?w=1400&ssl=1",
       alt: "Nini restaurant",
       website: "https://ninidesigncentre.com/restaurante/"

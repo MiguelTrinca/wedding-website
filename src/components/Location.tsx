@@ -12,20 +12,20 @@ export default function Location() {
   // Placeholder images for the carousel
   const locationImages = [
     {
-      src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=600&fit=crop",
-      alt: "Quinta do Furao exterior view"
+      src: "https://www.findmadeira.pt/wp-content/uploads/2024/11/05.-QdF-Solario.jpg",
+      alt: "Quinta do Furao 1"
     },
     {
-      src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop",
-      alt: "Wedding venue garden"
+      src: "https://www.findmadeira.pt/wp-content/uploads/2024/11/01.-QdF-Hotel.jpg",
+      alt: "Quinta Furao 2"
     },
     {
-      src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=600&fit=crop",
-      alt: "Ceremony area"
+      src: "https://www.quintadofurao.com/Images/restaurante_varanda.jpg",
+      alt: "Balcony"
     },
     {
-      src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop",
-      alt: "Reception hall"
+      src: "https://www.quintadofurao.com/Images/padaria.jpg",
+      alt: "Bread in Furnace"
     }
   ]
 

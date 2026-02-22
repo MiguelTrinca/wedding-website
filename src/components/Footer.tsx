@@ -47,7 +47,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex items-center justify-center md:justify-start gap-3">
-                  <Phone className="h-5 w-5 text-secondary" />
+                  <MessageCircle className="h-5 w-5 text-secondary" />
                   <a
                     href="tel:+351933767045"
                     className="text-background/80 hover:text-secondary transition-colors"
@@ -72,7 +72,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex items-center justify-center md:justify-start gap-3">
-                  <MessageCircle className="h-5 w-5 text-secondary" /> {/**Ver com baby */}
+                  <MessageCircle className="h-5 w-5 text-secondary" />
                   <a
                     href="tel:+351933767045"
                     className="text-background/80 hover:text-secondary transition-colors"

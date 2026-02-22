@@ -57,13 +57,14 @@ export default function Header() {
             {t("nav.gift")}
           </Link>
 
+          {/*
           <Link 
             href="/honeypot" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             {t("nav.honeyPot")}
           </Link>
-
+          */}
           <Button 
             variant="ghost" 
             size="icon" 
@@ -138,9 +139,11 @@ export default function Header() {
                 {t("nav.gift")}
               </Link>
 
+              {/*
               <Link href="/honeypot" className="text-lg font-medium" onClick={() => setOpen(false)}>
                 {t("nav.honeyPot")}
               </Link>
+              */}
 
               <div className="pt-4 border-t">
 

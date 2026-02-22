@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext"
 import { useState } from "react"
+import AnimatedSuitcase from "@/components/AnimtatedSuitcase"
 
 type GiftCardSpec = {
   title: string
@@ -17,40 +18,33 @@ type GiftCardSpec = {
 function GiftPageContent() {
   const { t } = useLanguage()
 
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [giftIsModalOpen, setGiftIsModalOpen] = useState(false)
+  const [honeyIsModalOpen, setHoneyIsModalOpen] = useState(false)
 
   const giftImages = [
     {
-      src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600",
+      src: "https://images.samsung.com/is/image/samsung/p6pim/ch/qe65s95fatxzu/gallery/ch-oled-s95f-qe65s95fatxzu-549873380?$Q90_1920_1280_F_PNG$",
       alt: "Travel experience",
     },
     {
-      src: "https://images.unsplash.com/photo-1528697203043-733bfdca6d5c?w=600",
+      src: "https://cdn.conforama.ch/medias/600000/00000/5000/900/20/G_605921_A.webp",
       alt: "Romantic dinner",
     },
     {
-      src: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600",
+      src: "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_55/556342/18315053_800.jpg",
       alt: "Wine experience",
     },
     {
-      src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600",
+      src: "https://assets.wsimgs.com/wsimgs/rk/images/dp/wcm/202543/0163/all-clad-d5-stainless-steel-7-piece-cookware-set-z.jpg",
       alt: "Home decor",
     },
     {
-      src: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600",
+      src: "https://www.shanzuchef.com/cdn/shop/files/3_92289648-0cc9-4a56-b9af-2687b3cf7501.jpg?v=1762395583&width=480",
       alt: "Living space",
     },
     {
-      src: "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=600",
+      src: "https://timemoreeu.com/cdn/shop/files/20250905150618_54_43.png?v=1757056669&width=1280",
       alt: "Kitchen essentials",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600",
-      alt: "Ocean experience",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600",
-      alt: "Adventure experience",
     },
   ]
   
@@ -76,11 +70,16 @@ function GiftPageContent() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+              <div className="container mx-auto px-4 text-center">
+                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
                 {t("gift.wishlist")}
-              </h2>
+                </h2>
+                <p className="text-foreground/80 max-w-2xl mx-auto">
+                  {t("gift.wishlistDesc")}
+                </p>
+              </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 my-8 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {giftImages.map((img, index) => (
                   <div
                     key={index}
@@ -97,7 +96,7 @@ function GiftPageContent() {
                       <Button
                         size="sm"
                         variant="secondary"
-                        onClick={() => setIsModalOpen(true)}
+                        onClick={() => setGiftIsModalOpen(true)}
                       >
                         {t("gift.gift")}
                       </Button>
@@ -109,34 +108,43 @@ function GiftPageContent() {
           </div>
         </section>
 
+        {/** Honey Pot */}
+        <section id="honeyPot" className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
+              {t("honeyPot.title")}
+            </h1>
+            <p className="text-foreground/80 max-w-2xl mx-auto">
+              {t("honeyPot.description")}
+            </p>
+            <div className="py-10">
+              <AnimatedSuitcase percentage={100}/>
+            </div>
+          </div>
 
-        {/* Closing CTA Section */}
-        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t("gift.thankYouTitle")}
+              {t("honeyPot.thankYouTitle")}
             </h2>
             <p className="text-foreground/80 max-w-xl mx-auto mb-8">
-              {t("gift.thankYouMessage")}
+              {t("honeyPot.thankYouMessage")}
             </p>
 
-            <Button
-              size="lg"
-              onClick={() => setIsModalOpen(true)}
-            >
-              {t("gift.gift")}
+            <Button size="lg" onClick={() => setHoneyIsModalOpen(true)}>
+              {t("honeyPot.donate")}
             </Button>
           </div>
+
         </section>
       </main>
 
       <Footer />
       
-      {isModalOpen && (
+      {giftIsModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/30 px-4">
           <div className="bg-white rounded-lg shadow-xl max-w-md w-full relative">
             <Button
-              onClick={() => setIsModalOpen(false)}
+              onClick={() => setGiftIsModalOpen(false)}
               className="absolute top-3 right-3"
               variant={"ghost"}
             >
@@ -161,9 +169,9 @@ function GiftPageContent() {
 
               <Button className="w-full" 
                 onClick={() =>{
-                  setIsModalOpen(false)
+                  setGiftIsModalOpen(false)
                   window.open(
-                    "https://easywishlist.app/w/w22h1eca8/casamento-teste",
+                    "https://easywishlist.app/w/wiiv4dnwr/casamento-beatriz-e-miguel",
                     "_blank"
                   )
                 }}>
@@ -173,6 +181,48 @@ function GiftPageContent() {
           </div>
         </div>
       )}
+
+      {honeyIsModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/30 px-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-md w-full relative">
+            <Button
+              onClick={() => setHoneyIsModalOpen(false)}
+              className="absolute top-3 right-3"
+              variant={"ghost"}
+            >
+              ✕
+            </Button>
+
+            <div className="p-6 space-y-4">
+              <h3 className="text-2xl font-bold text-foreground">
+                {t("honeyPot.modalTitle")}
+              </h3>
+
+              <div className="text-sm text-foreground/80 space-y-2">
+                <p>
+                    <strong>{t("honeyPot.phoneNumber")}:</strong> +351 933 767 045
+                </p>
+                <p>
+                  <strong>{t("honeyPot.accountHolder")}:</strong> Miguel Trinca
+                </p>
+                <p>
+                  <strong>IBAN:</strong> CH00 0000 0000 0000 0000 0
+                </p>
+              </div>
+
+              <p className="text-sm text-foreground/60">
+                {t("honeyPot.modalNote")}
+              </p>
+
+              <Button className="w-full" onClick={() => setHoneyIsModalOpen(false)}>
+                {t("honeyPot.close")}
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
+
 
     </div>
   )

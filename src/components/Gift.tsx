@@ -165,7 +165,7 @@ function HoneyPotCard() {
       {hovered && (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="pointer-events-auto">
-            <Link href="/honeypot" prefetch={false}>
+            <Link href="/gift#honeyPot" prefetch={false}>
               <Button size="lg" variant="secondary">{t("giftSectiondonate")}</Button>
             </Link>
           </div>
