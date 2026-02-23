@@ -162,6 +162,7 @@ function ActivitiesPageContent() {
     <div className="min-h-screen">
       <Header />
       <main>
+        
         {/* Activities Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
@@ -186,10 +187,10 @@ function ActivitiesPageContent() {
         <section id="restaurants" className="py-20 bg-gray-50 scroll-mt-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
                 {t("restaurants.title")}
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-foreground/80 max-w-2xl mx-auto">
                 {t("restaurants.description")}
               </p>
             </div>
@@ -219,7 +220,7 @@ function ActivitiesPageContent() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-1 gap-8 max-w-6xl mx-auto">
               <MaritimoCard maritimo={maritimo}/>
             </div>
           </div>
