@@ -111,7 +111,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Maritimo
     "maritimo.title": "Marítimo",
     "maritimo.description": "It’s impossible to promote Madeira without mentioning the greatest club on the Portuguese islands",
-    "maritimo.cardTitle": "Clube Sport Marítimo",
+    "maritimo.cardTitle": "Club Sport Marítimo",
     "maritimo.cardDesc": "If interested: you can visit the museum, the stadium, and the club shops.",
     "maritimo.cardLocation": "To belong to Marítimo is to be twice Madeiran.",
   
@@ -349,7 +349,7 @@ const translations: Record<Language, Record<string, string>> = {
     //Maritimo
     "maritimo.title": "Marítimo",
     "maritimo.description": "Não é possível promover a Madeira sem falar do maior das ilhas de Portugal",
-    "maritimo.cardTitle": "Clube Sport Marítimo",
+    "maritimo.cardTitle": "Club Sport Marítimo",
     "maritimo.cardDesc": "Se estiver interessado: é possível visitar o museu, o estádio e as lojas do clube.",
     "maritimo.cardLocation": "Pertencer ao Marítimo é ser duas vezes madeirense.",
 
