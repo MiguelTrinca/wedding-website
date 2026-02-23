@@ -200,7 +200,7 @@ const translations: Record<Language, Record<string, string>> = {
     "dressCodeWomen.closing": "Thank you for taking the time to review our dress code guidelines. We can’t wait to celebrate with you!",
   
     // Dress Code Men
-    "dressCodeMen.title": "Dress Code for Men",
+    "dressCodeMen.title": "Dress code for men",
     "dressCodeMen.description": "The groom will be wearing a tailcoat for the wedding. Therefore, he invites the guests on his side to also wear a tailcoat.",
     "dressCodeMen.howToWear": "How to wear a traditional tailcoat",
     "dressCodeMen.tailcoatJacket": "Tailcoat",
@@ -223,6 +223,8 @@ const translations: Record<Language, Record<string, string>> = {
     "dressCodeMen.avoidPolo": "Polo shirts",
     "dressCodeMen.avoidJeans": "Jeans or casual trousers",
     "dressCodeMen.closing": "Thank you for taking the time to review our dress code guidelines. We can’t wait to celebrate with you!",
+    "dressCodeMen.rentFraque": "Where to rent",
+  "dressCodeMen.rentFraqueDesc": "If you are interested in wearing a tailcoat, you can rent one. There are several shops in Lisbon, as well as in Madeira. The store we recommend in Madeira is \"Núpcias by Michelle\" - contact details are provided below.",
   
     // HoneyPot
     "honeyPot.title": "Honey Pot",
@@ -436,7 +438,7 @@ const translations: Record<Language, Record<string, string>> = {
     "dressCodeWomen.closing": "Obrigado por terem tirado tempo para rever as nossas diretrizes de código de vestuário. Mal podemos esperar para celebrar convosco!",
     
     // Dress Code Men
-    "dressCodeMen.title": "Código de Vestuário para Homens",
+    "dressCodeMen.title": "Código de vestuário para homens",
     "dressCodeMen.description": "O noivo vai usar um fraque como fato de casamento. Deste modo, convida os convidados da sua parte a vestirem também um fraque.",
     "dressCodeMen.howToWear": "Como usar uma fraque tradicional",
     "dressCodeMen.tailcoatJacket": "Fraque",
@@ -444,7 +446,7 @@ const translations: Record<Language, Record<string, string>> = {
     "dressCodeMen.shirt": "Camisa",
     "dressCodeMen.shirtDesc": "Uma camisa formal branca e nítida com colarinho de asa ou colarinho virado.",
     "dressCodeMen.waistcoat": "Colete",
-    "dressCodeMen.waistcoatDesc": "Um colete correspondente usado sob a casaca, tipicamente preto ou correspondente à casaca.",
+    "dressCodeMen.waistcoatDesc": "Um colete correspondente usado sob ao fraque, tipicamente preto ou correspondente ao fraque.",
     "dressCodeMen.tie": "Gravata",
     "dressCodeMen.tieDesc": "Gravata à escolha.",
     "dressCodeMen.trousers": "Calças",
@@ -456,9 +458,11 @@ const translations: Record<Language, Record<string, string>> = {
     "dressCodeMen.avoidInformalDesc": "Para manter a atmosfera formal do nosso casamento, por favor evitem os seguintes itens:",
     "dressCodeMen.avoidSneakers": "Sapatilhas ou calçado casual",
     "dressCodeMen.avoidTshirts": "T-shirts ou camisas casuais",
-    "dressCodeMen.avoidPolo": "Camisas polo",
+    "dressCodeMen.avoidPolo": "Polo",
     "dressCodeMen.avoidJeans": "Jeans ou calças casuais",
     "dressCodeMen.closing": "Obrigado por terem tirado tempo para rever as nossas diretrizes de código de vestuário. Mal podemos esperar para celebrar convosco!",
+    "dressCodeMen.rentFraque": "Onde pode alugar",
+    "dressCodeMen.rentFraqueDesc": "Se estiverem interessados a usar fraque podem alugar. Exsitem várias lojas em Lisboa, mas também na Madeira. A loja que recomendamos na Madeira é a \"Núpcias by Michelle\", seguem-se os contactos.",
 
     // HoneyPot
     "honeyPot.title": "Honey Pot",

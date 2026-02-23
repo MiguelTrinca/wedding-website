@@ -1,6 +1,6 @@
 "use client"
 
-import { Heart, Mail, Phone, MapPin } from "lucide-react"
+import { Heart, Mail, } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { MessageCircle  } from "lucide-react"
 

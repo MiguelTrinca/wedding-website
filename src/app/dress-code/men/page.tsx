@@ -6,10 +6,13 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import { useLanguage } from "@/contexts/LanguageContext"
 import { LanguageProvider } from "@/contexts/LanguageContext"
 import { useState } from "react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Car, Facebook, Link, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 
 function MenDressCodePageContent() {
   const { t } = useLanguage()
   const [current, setCurrent] = useState(0)
+  
   // Real-life tailcoat examples for carousel
   const tailcoatExamples = [
     {
@@ -198,6 +201,119 @@ function MenDressCodePageContent() {
             </div>
           </section>
 
+          {/** Where to Rent */}
+          <section className="py-20 scroll-mt-20">
+          <div className="container mx-auto px-4">
+
+
+            <div className="max-w-4xl mx-auto space-y-8">
+              <Card className="bg-secondary/20">
+                <CardHeader>
+                  <CardTitle className="text-foreground">{t("dressCodeMen.rentFraque")}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-foreground/80 mb-4">
+                    {t("dressCodeMen.rentFraqueDesc")}
+                  </p>
+                  <div className="flex flex-col gap-3 mt-4">
+                    <div className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors mt-4">
+                      <MapPin className="h-5 w-5" />
+                      <span>Rua do Ribeirinho de Baixo 8A, 2º Andar, Porta J, Funchal, Portugal, 9050-447</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors mt-4">
+                      <Mail className="h-5 w-5" />
+                      <a
+                        href="mailto:nupciasbymichelle@gmail.com"
+                      >
+                        nupciasbymichelle@gmail.com
+                      </a>
+                    </div>
+                    <div className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors mt-4">
+                      <Phone className="h-5 w-5" />
+                      <span>+351 916 325 020</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors mt-4">
+                      <Facebook className="h-5 w-5" />
+                      <a href="https://www.facebook.com/nupciasbymichelle">
+                        Núpcias by Michelle
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+
+          {/* 6. Avoid Section – Attire & Colors */}
+          <section className="mb-20">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-12 items-start">
+                
+                {/* First Column: Colors */}
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                    {t("dressCodeWomen.avoidWhite")}
+                  </h2>
+                  
+                  <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+                    {t("dressCodeWomen.avoidWhiteDesc")}
+                  </p>
+
+                  {/* Color Swatches */}
+                  <div className="grid grid-cols-4 gap-3">
+                    <div className="space-y-2">
+                      <div className="h-24 rounded-lg border-2 border-gray-300 bg-white"></div>
+                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorWhite")}</p>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFFF0]"></div>
+                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorIvory")}</p>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FAF0E6]"></div>
+                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorOffWhite")}</p>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-24 rounded-lg border-2 border-gray-300 bg-[#FFFDD0]"></div>
+                      <p className="text-sm text-center text-foreground/80 ">{t("dressCodeWomen.colorCream")}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Second Column: Informal Attire */}
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                    {t("dressCodeMen.avoidInformal")}
+                  </h2>
+                  
+                  <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+                    {t("dressCodeMen.avoidInformalDesc")}
+                  </p>
+                  
+                  <ul className="space-y-4 text-lg text-foreground/80">
+                    <li className="flex items-start">
+                      <span className="mr-3 text-primary font-bold">•</span>
+                      <span>{t("dressCodeMen.avoidSneakers")}</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3 text-primary font-bold">•</span>
+                      <span>{t("dressCodeMen.avoidTshirts")}</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3 text-primary font-bold">•</span>
+                      <span>{t("dressCodeMen.avoidPolo")}</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3 text-primary font-bold">•</span>
+                      <span>{t("dressCodeMen.avoidJeans")}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* 7. Closing Note Section */}
           <section className="mb-12">
