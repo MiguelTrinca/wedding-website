@@ -241,9 +241,9 @@ const translations: Record<Language, Record<string, string>> = {
     "honeyPot.close": "Close",
   
     // Gift
-    "gift.title": "Wedding Gifts",
+    "gift.title": "Wedding gifts",
     "gift.description": "Your presence is the greatest gift — but if you wish, here are two different approaches.",
-    "gift.wishlist": "Gift List",
+    "gift.wishlist": "Gift list",
     "gift.wishlistDesc": "Here is a list of physical gifts you may offer us.",
     "gift.thankYouTitle": "Thank you!",
     "gift.thankYouMessage": "We are immensely grateful for your love and generosity.",
@@ -479,9 +479,9 @@ const translations: Record<Language, Record<string, string>> = {
     "honeyPot.close": "Fechar",
 
     // Gift
-    "gift.title": "Presentes de Casamento",
+    "gift.title": "Presentes de casamento",
     "gift.description": "A vossa presença é o melhor presente - mas se desejarem, aqui estão duas abordagens diferentes.",
-    "gift.wishlist": "Lista de Presentes",
+    "gift.wishlist": "Lista de presentes",
     "gift.wishlistDesc": "Aqui deixamos uma lista de prendas físicas que nos podem oferecer.",
     "gift.thankYouTitle": "Obrigado!",
     "gift.thankYouMessage": "Somos imensamente gratos pelo vosso carinho e generosidade.",

@@ -2,18 +2,10 @@
 
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext"
 import { useState } from "react"
 import AnimatedSuitcase from "@/components/AnimtatedSuitcase"
-
-type GiftCardSpec = {
-  title: string
-  description: string
-  delayMs: number
-  images: { src: string; alt: string }[]
-}
 
 function GiftPageContent() {
   const { t } = useLanguage()
@@ -60,7 +52,7 @@ function GiftPageContent() {
 
       <main>
         {/* Intro Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
               {t("gift.title")}
@@ -72,7 +64,7 @@ function GiftPageContent() {
         </section>
 
         {/* Gift Gallery Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="container mx-auto px-4 text-center">
@@ -114,7 +106,7 @@ function GiftPageContent() {
         </section>
 
         {/** Honey Pot */}
-        <section id="honeyPot" className="py-20 bg-gray-50">
+        <section id="honeyPot" className="py-20 bg-background">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
               {t("honeyPot.title")}
