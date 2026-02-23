@@ -318,7 +318,7 @@ export default function RSVP() {
                     onValueChange={(value) => setFormData(prev => ({ ...prev, needsTransportation: value }))}
                   >
                     <SelectTrigger id="transportation" className="w-full">
-                      <SelectValue placeholder={t("rsvp.selectTransportation")} />
+                      <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="yes">{t("rsvp.transportationYes")}</SelectItem>
@@ -342,7 +342,7 @@ export default function RSVP() {
                     onValueChange={handleGuestCountChange}
                   >
                     <SelectTrigger id="guestCount" className="w-full">
-                      <SelectValue placeholder={t("rsvp.selectNumber")} />
+                      <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="0">{t("rsvp.justMe")}</SelectItem>
@@ -369,7 +369,7 @@ export default function RSVP() {
                       onValueChange={(value) => setFormData(prev => ({ ...prev, foodRestrictions: value }))}
                     >
                       <SelectTrigger id="mainGuestFoodRestrictions" className="w-full">
-                        <SelectValue placeholder={t("rsvp.selectDietary")} />
+                        <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="none">{t("rsvp.dietaryNone")}</SelectItem>
