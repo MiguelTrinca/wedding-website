@@ -33,41 +33,41 @@ function ThankYou() {
     const { t } = useLanguage()
 
     const cards: CardSpec[] = [
-        {
-          title: t("visitMadeira.activities"),
-          href: "/activities",
-          description: t("visitMadeira.activitiesDesc"),
-          delayMs: 0,
-          images: [
-            { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800", alt: "Mountains" },
-            { src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800", alt: "Ocean" },
-          ],
-        },
-        {
-          title: t("visitMadeira.restaurants"),
-          href: "/activities#restaurants",
-          description: t("visitMadeira.restaurantsDesc"),
-          delayMs: 2000,
-          images: [
-            { src: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=800", alt: "Table" },
-            { src: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800", alt: "Seafood" },
-            { src: "https://images.unsplash.com/photo-1528697203043-733bfdca6d5c?w=800", alt: "Wine" },
-            { src: "https://images.unsplash.com/photo-1520201163981-8c49a3b9d8f8?w=800", alt: "Dessert" },
-          ],
-        },
-        {
-          title: t("visitMadeira.transportation"),
-          href: "/activities#transportation",
-          description: t("visitMadeira.transportationDesc"),
-          delayMs: 1000,
-          images: [
-            { src: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800", alt: "Car" },
-            { src: "https://images.unsplash.com/photo-1516280030429-27679b3dc9cf?w=800", alt: "Road" },
-            { src: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800", alt: "Bus" },
-            { src: "https://images.unsplash.com/photo-1494475673543-6a6a27143b22?w=800", alt: "Coast road" },
-          ],
-        },
-      ]
+      {
+        title: t("visitMadeira.activities"),
+        href: "/activities",
+        description: t("visitMadeira.activitiesDesc"),
+        delayMs: 0,
+        images: [
+          { src: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=center,quality=60,height=720,dpr=1/tour_img/cdf3d4e46def7d3d.jpeg", alt: "Mountains" },
+          { src: "https://www.got2globe.com/wp-content/uploads/2024/07/porto-moniz-ilha-madeira-piscinas-naturais-novas.jpg.webp", alt: "Ocean" },
+          { src: "https://blog.madeira.best/storage/uploads/img/2020-04-29-1030535f64dcc25e2375f64dcc25e2f9.jpeg", alt: "Viewpoint" },
+          { src: "https://visitmadeira.com/media/pxsdhliu/lapas1-henrique-seruca.jpg?width=1920&height=1080&rnd=133408949751500000", alt: "Iguarias" },
+        ],
+      },
+      {
+        title: t("visitMadeira.restaurants"),
+        href: "/activities#restaurants",
+        description: t("visitMadeira.restaurantsDesc"),
+        delayMs: 2000,
+        images: [
+          { src: "https://kampo.pt/wp-content/uploads/2024/07/aaaaa.png", alt: "Table" },
+          { src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/9a/34/3a/the-beer-garden.jpg?w=1800&h=1000&s=1", alt: "Seafood" },
+          { src: "https://www.restaurantesantoantonio.com/img/04Menu05.jpg", alt: "Wine" },
+          { src: "https://images.unsplash.com/photo-1520201163981-8c49a3b9d8f8?w=800", alt: "Dessert" },
+        ],
+      },
+      {
+        title: t("visitMadeira.transportation"),
+        href: "/activities#transportation",
+        description: t("visitMadeira.transportationDesc"),
+        delayMs: 1000,
+        images: [
+          { src: "https://www.madeira-holidays.eu/wp-content/uploads/2023/08/madeira-taxo.jpeg", alt: "Car" },
+          { src: "https://jornaleconomico.sapo.pt/wp-content/themes/yootheme/cache/b5/autocarro-madeira-b5775866.png", alt: "Road" },
+        ],
+      },
+    ]
 
 
       function AutoScrollCard({ spec }: { spec: CardSpec }) {

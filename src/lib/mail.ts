@@ -15,23 +15,26 @@ export async function sendConfirmationEmail(
   firstName: string,
   isAttending: string
 ) {
-  const attendingText =
+  const attendingText1st =
     isAttending === "yes"
-      ? "We’re so happy you’ll be joining us ❤️"
-      : "We’re sorry you can’t make it, but thank you for letting us know 💌"
+      ? "Estamos muito felizes por poder contar com a sua presença ❤️"
+      : "Temos muita pena por não poder estar presente."
+  
+      const attendingText2nd =
+    isAttending === "yes"
+      ? "Se precisar de fazer alguma alteração, sinta-se à vontade para responder diretamente a este email."
+      : "Caso a sua resposta venha a mudar, por favor informe-nos diretamente através deste email."
 
   await transporter.sendMail({
-    from: `"Wedding RSVP" <${process.env.SMTP_FROM}>`,
+    from: `"Wedding RSVP" ${process.env.SMTP_FROM}`,
     to,
     subject: "RSVP Confirmation",
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-        <h2>Thank you, ${firstName}!</h2>
-        <p>${attendingText}</p>
-        <p>
-          If you need to change anything, feel free to reply to this email.
-        </p>
-        <p>— With love 💍</p>
+        <h2>Obrigado, ${firstName}!</h2>
+        <p>${attendingText1st}</p>
+        <p>${attendingText2nd}</p>
+        <p>Até breve 💍</p>
       </div>
     `,
   })

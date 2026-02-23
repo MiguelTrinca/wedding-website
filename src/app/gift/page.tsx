@@ -21,6 +21,11 @@ function GiftPageContent() {
   const [giftIsModalOpen, setGiftIsModalOpen] = useState(false)
   const [honeyIsModalOpen, setHoneyIsModalOpen] = useState(false)
 
+  const honeyPotPercentage = Number.parseInt(
+    process.env.NEXT_PUBLIC_WEDDING_HONEY_POT_PERCENT ?? "0",
+    10
+  ) || 0
+
   const giftImages = [
     {
       src: "https://images.samsung.com/is/image/samsung/p6pim/ch/qe65s95fatxzu/gallery/ch-oled-s95f-qe65s95fatxzu-549873380?$Q90_1920_1280_F_PNG$",
@@ -118,7 +123,7 @@ function GiftPageContent() {
               {t("honeyPot.description")}
             </p>
             <div className="py-10">
-              <AnimatedSuitcase percentage={0}/>
+              <AnimatedSuitcase percentage={honeyPotPercentage}/>
             </div>
           </div>
 
