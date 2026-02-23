@@ -87,7 +87,7 @@ const translations: Record<Language, Record<string, string>> = {
     "activities.diversosDesc": "For more relaxed (or not) plans, we suggest a Madeira wine tasting, a cable car ride, and a traditional Monte toboggan ride.",
   
     // Restaurants
-    "restaurants.title": "Best Restaurants",
+    "restaurants.title": "Best restaurants",
     "restaurants.description": "Discover our favorite dining spots in Madeira",
     "restaurants.kampo": "Kampo",
     "restaurants.kampoDesc": "Enjoy the chef’s counter and delight in the blend of flavors.",
@@ -118,7 +118,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Transportation
     "transportation.title": "Transportation",
     "transportation.description": "Information on how to get around Madeira",
-    "transportation.weddingTransport": "Wedding Day Transportation",
+    "transportation.weddingTransport": "Wedding day transportation",
     "transportation.weddingTransportDesc": "Transportation will be provided from the ceremony (Funchal) to Quinta do Furão and back.",
     "transportation.carRental": "Car Rental",
     "transportation.carRentalDesc": "The island is well equipped with many car rental companies. We recommend “Baía Car”: a friend who rents cars at a great price. Of course, you can also rent from well-known companies (Hertz, Europcar, etc.)",
@@ -177,7 +177,7 @@ const translations: Record<Language, Record<string, string>> = {
     "rsvp.thankYouMessage": "Your RSVP has been received. It will be a pleasure to celebrate with you! Please feel free to explore our website.",
   
     // Dress Code
-    "dressCode.title": "Dress Code",
+    "dressCode.title": "Dress code",
     "dressCode.description": "Choose your style and discover our dress code recommendations",
     "dressCode.women": "Women",
     "dressCode.womenDesc": "Elegant wedding attire",
@@ -186,9 +186,9 @@ const translations: Record<Language, Record<string, string>> = {
     "dressCode.viewDetails": "View details",
   
     // Dress Code Women
-    "dressCodeWomen.title": "Dress Code for Women",
+    "dressCodeWomen.title": "Dress code for women",
     "dressCodeWomen.description": "This page provides guidance to help guests choose formal and appropriate attire for our day. We want everyone to feel comfortable and elegant.",
-    "dressCodeWomen.colorGuidelines": "Color Guidelines",
+    "dressCodeWomen.colorGuidelines": "Color guidelines",
     "dressCodeWomen.avoidWhite": "Please avoid white and similar shades",
     "dressCodeWomen.avoidWhiteDesc": "To honor the bride and preserve the special meaning of white on this day, we kindly ask guests to avoid wearing white, ivory, cream, and very light neutral tones.",
     "dressCodeWomen.colorWhite": "White",
@@ -413,7 +413,7 @@ const translations: Record<Language, Record<string, string>> = {
     "rsvp.thankYouMessage": "O vosso RSVP foi recebido. Será um prazer celebrar convosco! Por favor sintam-se à vontade de explorar o nosso website",
     
     // Dress Code
-    "dressCode.title": "Código de Vestuário",
+    "dressCode.title": "Código de vestuário",
     "dressCode.description": "Escolham o vosso estilo e descubram as nossas recomendações de código de vestuário",
     "dressCode.women": "Mulheres",
     "dressCode.womenDesc": "Vestuário elegante para casamento",
@@ -422,9 +422,9 @@ const translations: Record<Language, Record<string, string>> = {
     "dressCode.viewDetails": "Ver detalhes",
     
     // Dress Code Women
-    "dressCodeWomen.title": "Código de Vestuário para Mulheres",
+    "dressCodeWomen.title": "Código de vestuário para mulheres",
     "dressCodeWomen.description": "Esta página fornece orientações para ajudar os convidados a escolher vestuário formal e apropriado para o nosso dia. Queremos que todos se sintam confortáveis e elegantes.",
-    "dressCodeWomen.colorGuidelines": "Diretrizes de Cores",
+    "dressCodeWomen.colorGuidelines": "Diretrizes de cores",
     "dressCodeWomen.avoidWhite": "Por favor, evitem branco e tons semelhantes",
     "dressCodeWomen.avoidWhiteDesc": "Para honrar a noiva e manter o significado especial do branco neste dia, pedimos gentilmente que os convidados evitem usar branco, marfim, creme e tons neutros muito claros.",
     "dressCodeWomen.colorWhite": "Branco",
